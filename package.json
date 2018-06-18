@@ -1,0 +1,25 @@
+{
+  "name": "hiulitscuisine",
+  "version": "1.0.0",
+  "description": "hiulit's cuisine - cuina vegana casolana",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiulit/hiulitscuisine.git"
+  },
+  "author": "hiulit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiulit/hiulitscuisine/issues"
+  },
+  "homepage": "https://github.com/hiulit/hiulitscuisine#readme",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  }
+}

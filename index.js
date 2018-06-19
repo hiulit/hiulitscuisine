@@ -2,12 +2,16 @@ const cheerio = require('cheerio')
 const fs = require('fs')
 const path = require('path')
 const request = require('request')
-const rp = require('request-promise')
 
-function getURLs() {
-    // console.log('> Getting URLs ...')
+var http = require('http');
+var https = require('https');
+http.globalAgent.maxSockets = 10;
+https.globalAgent.maxSockets = 10;
+
+function getURLs(url) {
+    console.log('> Getting URLs ...')
     return new Promise(function(resolve, reject) {
-        request('http://www.hiulitscuisine.com/category/receptes/', function(err, response, body) {
+        request(url, function(err, response, body) {
             if(err) reject(err)
             // if(response.statusCode !== 200) {
             //     reject('Invalid status code: '+response.statusCode)
@@ -26,7 +30,6 @@ function getURLs() {
 }
 
 function getRecipe(url) {
-    // console.log('> Getting ' + url + ' recipe ...')
     return new Promise(function(resolve, reject) {
         let options = {
             uri: url,
@@ -35,6 +38,7 @@ function getRecipe(url) {
             }
         }
         request(options, function(err, response, body) {
+            console.log('> Getting ' + url + ' recipe ...')
             if(err) reject(err)
             if(response.statusCode !== 200) {
                 console.log(url, response.statusCode)
@@ -114,13 +118,13 @@ function createJSON(data, name) {
             console.error(err)
             return
         }
-        // console.log('> "' + name + '.json" has been created successfully!')
+        console.log('> "' + name + '.json" has been created successfully!')
     })
 }
 
-function getAllRecipes() {
-    // console.log('> Getting all the recipes ...')
-    getURLs()
+function getAllRecipes(url) {
+    console.log('> Getting all the recipes ...')
+    getURLs(url)
         .then(function(urls) {
             let promises = []
             for(let i=0; i<urls.length; i++) {
@@ -128,10 +132,10 @@ function getAllRecipes() {
             }
             Promise.all(promises)
                 .then(function(response){
-                    // console.log('> Received ' + response.length + ' recipes.')
+                    console.log('> Received ' + response.length + ' recipes.')
                     createJSON(response, 'receptes 2')
                 })
         })
 }
 
-getAllRecipes()
+getAllRecipes('http://www.hiulitscuisine.com/category/receptes/')

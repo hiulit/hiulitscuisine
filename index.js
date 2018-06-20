@@ -5,8 +5,8 @@ const request = require('request')
 
 var http = require('http');
 var https = require('https');
-http.globalAgent.maxSockets = 10;
-https.globalAgent.maxSockets = 10;
+http.globalAgent.maxSockets = 20;
+https.globalAgent.maxSockets = 20;
 
 function getURLs(url) {
     console.log('> Getting URLs ...')

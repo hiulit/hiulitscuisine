@@ -1,5 +1,6 @@
 [
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2013/01/apple-crumble-610x347.jpg",
         "title": "Apple Crumble",
         "people": "per a 8-10 persones",
         "ingredients": [
@@ -10,7 +11,9 @@
             "1 cullerada de suc llimona",
             "1 culleradeta de canyella"
         ],
-        "time": "1h",
+        "time": [
+            "1h"
+        ],
         "preparation": [
             "Preescalfar el forn a 180 ºC.",
             "Pelar les pomes i tallar a daus.",
@@ -41,6 +44,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/12/pate-tomaquets-secs-ametlles-610x347.jpg",
+        "blockquote": [
+            "Aquesta és una de les receptes que hem fet en els cursos de cuina vegana de hiulit’s cuisine i  Vegetales a Pedales juntament amb d’altres com: Mousse de xocolata vegana, Veganesa, Llets vegetals…"
+        ],
         "title": "Pesto/Paté de tomàquets secs i ametlles",
         "people": "per a 4-6 persones",
         "ingredients": [
@@ -48,7 +55,9 @@
             "80 g d’ametlles crues o torrades",
             "1-2 alls"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Posar els tomàquets secs en remull (uns 15 min).",
             "Si s’utilitzen ametlles crues, torrar en una paella sense oli, remenant perquè no es cremin i quedin ben torrades per tots costats. Si s’utilitzen ametlles torrades, això que us estalvieu  ",
@@ -75,6 +84,11 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/12/arros_negre_vega_sense_tinta_calamar_allioli2-610x347.jpg",
+        "blockquote": [
+            "La clau està en l’arròs negre per al color i les algues per a donar-li el toc de mar.",
+            "L’arròs negre és una varietat d’arròs provinent de la Xina. Segons la tradició xinesa, aquest arròs era únicament cultivat per a ser consumit per l’emperador i la seva cort.\nEs pot trobar fàcilment a les botigues de menjar ecològiques o herbolaris."
+        ],
         "title": "Arròs negre vegà (sense tinta de calamar) amb allioli",
         "people": "per a 2 persones",
         "ingredients": [
@@ -85,7 +99,9 @@
             "5 g d’algues seques (wakame, dulse, kombu, espirulina…)",
             "allioli"
         ],
-        "time": "1h",
+        "time": [
+            "1h"
+        ],
         "preparation": [
             "Posar les algues en remull (uns 15 min).",
             "En un morter fer una picada amb l’all i el julivert (es pot posar una mica de sal perquè no saltin els alls al picar-los). Reservar.",
@@ -115,6 +131,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/10/moniatos-forn-anelles-ceba-610x347.jpg",
+        "blockquote": [
+            "Aquesta recepta l’hem tret del B-12 Restaurant/Bar Vegà de Girona, de quan vam anar-hi a dinar, i l’hem intentat reproduir  "
+        ],
         "title": "Moniatos al forn amb anelles de ceba",
         "people": "per a 2 persones",
         "ingredients": [
@@ -125,7 +145,9 @@
             "aigua",
             "sal i pebre"
         ],
-        "time": "1:15h",
+        "time": [
+            "1:15h"
+        ],
         "preparation": [
             "Preescalfar el forn a 200ºC.",
             "Posar paper especial per a forn (o paper d’alumini) a la safata del forn, posar-hi el moniato i coure al forn 1h.",
@@ -138,8 +160,7 @@
             "Un cop el moniato estigui cuit, treure’l del forn, deixar refredar una mica i tallar a rodanxes o a tires."
         ],
         "notes": [
-            "La recepta original anava amb una salsa de llima i ametlles boníssima, però no teníem ni llimes ni ametlles.",
-            "Nosaltres vam fer una salsa de tahini (que té un toc de llimona), però també s’hi podria posar un pesto de cacauets o d’anacards."
+            "El moniato, com més estona està al forn, més dolç es torna. A partir dels 45 min ja està prou cuit com per menjar-lo, però si el voleu més dolç, deixeu-lo 1h o una 1:15h  "
         ],
         "categories": [
             "Cuina Americana",
@@ -159,6 +180,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/10/crema-pastanaga-curri-llet-coco-610x347.jpg",
         "title": "Crema de pastanaga amb curri i llet de coco",
         "people": "per a 3-4 persones",
         "ingredients": [
@@ -171,7 +193,9 @@
             "1 cullerada de margarina (o 2 cullerades d’oli d’oliva)",
             "1 l d’aigua"
         ],
-        "time": "30 min (+ nevera)",
+        "time": [
+            "30 min (+ nevera)"
+        ],
         "preparation": [
             "Pelar i tallar la ceba i les patates a daus.",
             "En una olla, posar la margarina (o l’oli) i sofregir la ceba durant un parell de minuts. Afegir les patates i sofregir 2 min més.",
@@ -203,6 +227,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/09/llimonada-amb-menta-610x347.jpg",
+        "blockquote": [
+            "Una beguda molt refrescant i molt fàcil de fer!"
+        ],
         "title": "Llimonada a la menta",
         "people": "per a 2 persones",
         "ingredients": [
@@ -212,7 +240,9 @@
             "sucre al gust (o xarop d’atzavara, etc.)",
             "glaçons de gel"
         ],
-        "time": "5 min",
+        "time": [
+            "5 min"
+        ],
         "preparation": [
             "Posar tots els ingredients (aigua, suc de llimona, fulles de menta, sucre i gel) a la batedora i batre fins que el gel quedi ben picat i dissolt.",
             "Colar i servir."
@@ -235,22 +265,24 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/08/pastis-xocolata3-610x347.jpg",
+        "blockquote": [
+            "Un pastís molt ràpid de preparar i que agradarà molt als fans de la xocolata \nÉs millor preparar-lo amb un dia d’antelació."
+        ],
         "title": "Pastís de mousse de xocolata",
         "people": "per a 8-10 persones",
         "ingredients": [
             "15 galetes tipus digestive",
             "60 g de nous",
             "2 cullerades de cacau en pols",
-            "100 g de margarina vegetal"
+            "100 g de margarina vegetal",
+            "450 g de tofu suau/tou",
+            "100 g de xocolata negre (o amb llet vegetal)",
+            "3 cullerades de cacau dissoltes en 50 ml d’aigua (opcional)",
+            "4 cullerades de xarop d’atzavara",
+            "(+ xocolata per decorar)"
         ],
-        "time": "450 g de tofu suau/tou100 g de xocolata negre (o amb llet vegetal)3 cullerades de cacau dissoltes en 50 ml d’aigua (opcional)4 cullerades de xarop d’atzavara(+ xocolata per decorar)",
-        "preparation": [
-            "Posar les galetes digestive i les nous a la batedora i triturar.",
-            "Desfer la margarina vegetal i afegir a la batedora juntament amb el cacau. Batre fins a obtenir una massa homogènia.",
-            "Col·locar la massa en un motlle i prémer amb les mans.",
-            "Posar a la nevera 1-2 h."
-        ],
-        "notes": [
+        "time": [
             "20 min (+ nevera)"
         ],
         "video": "http://player.vimeo.com/video/55479273?badge=0",
@@ -272,6 +304,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/06/crema_carbasso-610x347.jpg",
+        "blockquote": [
+            "Una crema que es pot prendre freda com la Vichyssoise"
+        ],
         "title": "Crema de carbassó",
         "people": "per a 3-4 persones",
         "ingredients": [
@@ -281,7 +317,9 @@
             "1 got de llet de soia (opcional)",
             "1 cullerada de margarina"
         ],
-        "time": "25 min (+ nevera)",
+        "time": [
+            "25 min (+ nevera)"
+        ],
         "preparation": [
             "Pelar i tallar la ceba i les patates a daus.",
             "En una olla, posar la margarina i sofregir la ceba durant un parell de minuts. Afegir les patates i sofregir 2 min més.",
@@ -290,8 +328,13 @@
             "Triturar amb la batedora, afegir el got de llet de soia (opcional), salpebrar al gust i acabar de triturar.",
             "Deixar refredar a la nevera."
         ],
-        "notes": [
+        "presentation": [
             "Servir ben freda en un bol o plat fons."
+        ],
+        "notes": [
+            "Es pot servir amb un rajolí d’oli d’oliva o amb uns “picatostes”.",
+            "Es pot canviar la llet de soia per qualsevol altra llet vegetal.",
+            "Es pot canviar la margarina per a sofregir per un raig d’oli d’oliva."
         ],
         "categories": [
             "Cuina Tradicional",
@@ -308,6 +351,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/06/hamburgueses-broquil-610x347.jpg",
         "title": "Hamburgueses de bròcoli",
         "people": "per a 6-8 hamburgueses",
         "ingredients": [
@@ -318,7 +362,9 @@
             "4-5 cullerades d’aigua",
             "100 g de farina de blat (o de blat de moro…)"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Tallar els brots del bròcoli i cuinar al vapor uns 5-7 min (fins que estiguin tous però no es desfacin). Reservar.",
             "En un bol, barrejar la farina de cigró i la de blat de moro amb l’aigua fins que no quedin grumolls.",
@@ -330,8 +376,12 @@
             "Repetir fins a tenir la paella amb 3-4 “hamburguesetes”.",
             "Sofregir a foc lent/mitjà banda i banda fins que estiguin daurades."
         ],
-        "notes": [
+        "presentation": [
             "Servir amb algun tipus de salsa, com ara una Veganesa (maionesa vegetal)."
+        ],
+        "notes": [
+            "Si no es té farina de cigró o de blat de moro, es pot utilitzar farina de blat.",
+            "Per als celíacs, podeu substituir la farina de blat (i la de cigró si no la trobeu sense gluten) per la de blat de moro."
         ],
         "categories": [
             "Cuina Tradicional",
@@ -351,6 +401,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/05/pastis-poma21-610x347.jpg",
         "title": "Pastís de poma",
         "people": "per a 8-10 persones",
         "ingredients": [
@@ -358,25 +409,20 @@
             "1 culleradeta de sucre",
             "1 culleradeta de sal",
             "100 g de margarina (congelada)",
-            "1 got d’aigua (molt freda, amb glaçons de gel)"
+            "1 got d’aigua (molt freda, amb glaçons de gel)",
+            "8-10 pomes",
+            "2 cullerades de suc de llimona",
+            "150 g de sucre",
+            "34 g de farina de blat",
+            "16 g de margarina",
+            "1 culleradeta de canyella",
+            "1 culleradeta de sal"
         ],
-        "time": "8-10 pomes2 cullerades de suc de llimona150 g de sucre34 g de farina de blat16 g de margarina1 culleradeta de canyella1 culleradeta de sal",
-        "preparation": [
-            "Preescalfar el forn a 200 ºC.",
-            "Sobre el marbre, barrejar la farina amb el sucre i la sal.",
-            "Repartir la margarina congelada tallada a daus petits i barrejar amb la farina amb una forquilla.",
-            "Afegir una cullerada d’aigua (sense els glaçons, només l’aigua) i barrejar amb l’ajuda de la forquilla. Repetir el procés fins que estigui tot ben barrejat (no cal utilitzar tota l’aigua, només fins a obtenir una massa homogènia i consistent).",
-            "Amassar la massa, formar una bola i tallar en 2 parts iguals.",
-            "Escampar farina pel marbre, posar 1 de les masses, escampar farina per sobre i estirar amb un corró fins que la seva superfície cobreixi (i sobrepassi una mica) el motlle a utilitzar.",
-            "Enrotllar la massa al corró i desenrotllar amb cura en el motlle.",
-            "Posar les pomes amb el suc i repartir la margarina congelada tallada a daus.",
-            "Seguir els mateixos passos amb la massa restant. Estirar i posar sobre.",
-            "Retallar les vores sobrants deixant la massa justa per poder ajuntar les dues capes.",
-            "Fer uns talls de ventilació a la capa superior.",
-            "Pintar amb una mica de llet vegetal (opcional), escampar una mica de sucre i enfornar durant 45-50 min."
+        "time": [
+            "1:15 h"
         ],
         "notes": [
-            "1:15 h"
+            "No és obligatori que la margarina estigui congelada però va millor per treballar amb la massa."
         ],
         "categories": [
             "Berenars",
@@ -396,6 +442,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/05/espinacs-cigrons-asiatica2-610x347.jpg",
         "title": "Espinacs amb cigrons a la asiàtica",
         "people": "per a 2-3 persones",
         "ingredients": [
@@ -405,7 +452,9 @@
             "2 dents d’all",
             "1 culleradeta de pasta de curri (al gust)"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Posar els bolets xiitake en un bol amb aigua a hidratar durant uns 10-15 min.",
             "Rentar i bullir els espinacs durant 1 min. Escórrer i reservar.",
@@ -431,6 +480,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/05/germinat-cigrons-610x347.jpg",
         "title": "Com germinar a casa III: Germinat de cigrons",
         "people": "per a 2 persones",
         "ingredients": [
@@ -440,7 +490,9 @@
             "1 tela mosquitera",
             "1 goma elàstica"
         ],
-        "time": "2-4 dies (+ 8-12 h)",
+        "time": [
+            "2-4 dies (+ 8-12 h)"
+        ],
         "preparation": [
             "Posar els cigrons dins el pot de vidre i cobrir amb aigua. Deixar remullar entre 8-12 h.",
             "Tapar el pot de vidre amb la tela mosquitera subjectada amb la goma elàstica i escórrer.",
@@ -462,6 +514,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/muhammara-610x347.jpg",
+        "blockquote": [
+            "Una crema de pebrots i nous típica de Síria que juntament amb l’hummus i el mutabal o baba ghanoush són perfectes per a acompanyar un bon plat de falafel  "
+        ],
         "title": "Muhammara",
         "people": "per a 2-3 persones",
         "ingredients": [
@@ -472,7 +528,9 @@
             "100 ml d’oli d’oliva",
             "sal"
         ],
-        "time": "10 min (+ forn)",
+        "time": [
+            "10 min (+ forn)"
+        ],
         "preparation": [
             "Preescalfar el forn a 180ªC.",
             "Escalivar els pebrots uns 45 min.",
@@ -499,6 +557,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/05/rawnie-brownie-crudivega2-610x347.jpg",
         "title": "Rawnie (brownie crudivegà)",
         "people": "per a 6-8 persones",
         "ingredients": [
@@ -510,7 +569,9 @@
             "1/2 culleradeta de sal",
             "1 i 1/2 culleradeta d’aroma de vainilla (opcional)"
         ],
-        "time": "15 min (+ nevera)",
+        "time": [
+            "15 min (+ nevera)"
+        ],
         "preparation": [
             "Triturar les ametlles, nous i anacards en una batedora.",
             "Tallar els dàtils a trossos i afegir a la batedora juntament amb la garrofa en pols (o cacau en pols), la sal i l’aroma de vainilla (opcional).",
@@ -519,10 +580,13 @@
             "Escampar la massa del rawnie i prémer fins que ocupi tota la superfície i quedi ben compacta.",
             "Deixar a la nevera un parell d’hores perquè s’acabi de compactar."
         ],
-        "notes": [
+        "presentation": [
             "Escampar una mica de garrofa en pols (o cacau en pols) per damunt.",
             "Acompanyar amb unes rodanxes de maduixa.",
             "També s’hi pot escampar una mica de Mousse crudivegana d’alvocat i cacau per damunt"
+        ],
+        "notes": [
+            "El paper film no és obligatori, però ajuda a que el rawnie no s’enganxi a la safata i sigui més fàcil de tallar i treure."
         ],
         "categories": [
             "Berenars",
@@ -542,6 +606,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/orxata-610x347.jpg",
+        "blockquote": [
+            "Podeu seguir l’exemple del vídeo de la “Llet d’ametlles“."
+        ],
         "title": "Orxata",
         "people": "per a 1 l",
         "ingredients": [
@@ -550,7 +618,9 @@
             "8-10 dàtils sense pinyol (o sucre, xarop d’atzavara… al gust)",
             "1/2 branca de canyella (o 1/2 culleradeta de canyella en pols)"
         ],
-        "time": "20 min (+ 8-12 h)",
+        "time": [
+            "20 min (+ 8-12 h)"
+        ],
         "preparation": [
             "Posar les xufes en remull unes 8-12 h.",
             "Escórrer les xufes, tallar els dàtils a trossos i posar al got de la batedora juntament amb la canyella.",
@@ -577,6 +647,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/05/alfals-610x347.jpg",
         "title": "Com germinar a casa II: Germinat d’alfals",
         "people": "per a 2 persones",
         "ingredients": [
@@ -586,7 +657,9 @@
             "1 tela mosquitera",
             "1 goma elàstica"
         ],
-        "time": "4-6 dies (+ 6-8 h)",
+        "time": [
+            "4-6 dies (+ 6-8 h)"
+        ],
         "preparation": [
             "Posar les llavors d’alfals dins el pot de vidre i cobrir amb aigua. Deixar remullar entre 6-8 h.",
             "Tapar el pot de vidre amb la tela mosquitera subjectada amb la goma elàstica i escórrer.",
@@ -608,14 +681,22 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/04/germinat-llenties-610x347.jpg",
         "title": "Com germinar a casa I: Germinat de llenties",
-        "people": "Estrenem nova secció… Germinats!",
+        "people": "per a 2 persones",
         "ingredients": [
+            "1 pot de vidre",
+            "1 tela mosquitera",
+            "1 goma elàstica",
+            "1 cullerada de llenties crues",
+            "aigua",
             "1 pot de vidre",
             "1 tela mosquitera",
             "1 goma elàstica"
         ],
-        "time": "1 cullerada de llenties cruesaigua1 pot de vidre1 tela mosquitera1 goma elàstica",
+        "time": [
+            "2-4 dies (+ 8-12 h)"
+        ],
         "preparation": [
             "Posar les llenties dins el pot de vidre i cobrir amb aigua. Deixar remullar entre 8-12 h.",
             "Tapar el pot de vidre amb la tela mosquitera subjectada amb la goma elàstica i escórrer.",
@@ -624,7 +705,8 @@
             "Esbandir cada dia (1 o 2 cops depenent de si és hivern o estiu) per a mantenir la humitat."
         ],
         "notes": [
-            "2-4 dies (+ 8-12 h)"
+            "Les llenties es poden menjar a partir del segon dia, quan ja ha començat a sortir el brot, però es poden deixar fins als 4-5 dies perquè el brot sigui més llarg.",
+            "Aguanta uns 3-4 dies a la nevera, ben tapat."
         ],
         "categories": [
             "Cuina Tradicional",
@@ -637,6 +719,12 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/04/llet-ametlles-610x347.jpg",
+        "blockquote": [
+            "Estrenem nova secció… Llets vegetals!",
+            "Són tan fàcils de preparar que ja no tornareu a comprar més llet envasada  ",
+            "A més, les podeu preparar al vostre gust, més o menys dolça, amb un toc de canyella o de llimona… Com us vingui més de gust!"
+        ],
         "title": "Llet d’ametlles",
         "people": "per a 750 ml",
         "ingredients": [
@@ -644,7 +732,9 @@
             "750 ml d’aigua",
             "sucre, xarop d’atzavara o dàtils com a edulcorant (opcional)"
         ],
-        "time": "20 min (+ 8-12 h)",
+        "time": [
+            "20 min (+ 8-12 h)"
+        ],
         "preparation": [
             "Posar les ametlles crues en remull unes 8-12 h.",
             "Escórrer les ametlles i posar al got de la batedora.",
@@ -673,6 +763,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/03/espaguetis-crus-amb-pesto-de-cacahuets-610x347.jpg",
         "title": "Espaguetis crudivegans amb pesto de cacauets",
         "people": "per a 2 persones",
         "ingredients": [
@@ -684,7 +775,9 @@
             "120 ml oli d’oliva (1/2 got)",
             "1 dent d’all (opcional)"
         ],
-        "time": "10 min",
+        "time": [
+            "10 min"
+        ],
         "preparation": [
             "Pelar el carbassó i la pastanaga i fer espaguetis (nosaltres hem fet servir aquest utensili).",
             "En un got de batedora posar l’alfàbrega, els pinyons, els cacauets i la dent d’all (opcional) i triturar fins a obtenir una pasta.",
@@ -712,6 +805,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/04/amanida-tomaquet-cogombre-610x347.jpg",
         "title": "Amanida de tomàquet i cogombre",
         "people": "per a 2-3 persones",
         "ingredients": [
@@ -722,7 +816,9 @@
             "un grapat de julivert",
             "oli d’oliva"
         ],
-        "time": "10 min",
+        "time": [
+            "10 min"
+        ],
         "preparation": [
             "Pelar el cogombre i tallar en trossos grans.",
             "Tallar el tomàquet en trossos grans.",
@@ -749,22 +845,8 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/03/batut-de-maduixes-i-espinacs-610x347.jpg",
         "title": "Batut de maduixes i espinacs",
-        "people": "",
-        "ingredients": [
-            "250 g de maduixes",
-            "150 g d’espinacs",
-            "1 poma",
-            "xarop d’atzavara (“agave” en castellà)"
-        ],
-        "time": "5 min",
-        "preparation": [],
-        "notes": [
-            "Pelar la poma, tallar a daus i posar al got de batedora.",
-            "Treure el barret de fulles de les maduixes i afegir al got juntament amb els espinacs.",
-            "Afegir 1/2 got d’aigua i xarop d’atzavara al gust.",
-            "Batre."
-        ],
         "categories": [
             "Berenars",
             "Cuina Tradicional",
@@ -780,6 +862,11 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/03/arros-de-diumenge2-610x347.jpg",
+        "blockquote": [
+            "Aquest plat segueix la filosofia de “a veure què hi ha a la nevera” o “una mica d’aquest tupper i una mica d’aquell”.\nAquesta filosofia d’apanyar-se amb qualsevol cosa o d’aprofitar-ho tot és la que volem transmetre des de hiulit’s cuisine, per això hem fet aquesta recepta d’arròs a l’estil paella aprofitant restes de la nevera.",
+            "I l’hem anomenat arròs de diumenge perquè és el dia en que tot està tancat i només tens per a menjar el que hi ha a la nevera o al rebost  "
+        ],
         "title": "Arròs de diumenge",
         "people": "per a 2-3 persones",
         "ingredients": [
@@ -793,7 +880,9 @@
             "2 dents d’all",
             " julivert"
         ],
-        "time": "1:30 h",
+        "time": [
+            "1:30 h"
+        ],
         "preparation": [
             "En un morter fer una picada amb l’all, el julivert, el pebre vermell dolç i el safrà (es pot posar una mica de sal perquè no saltin els alls al picar-los).",
             "Afegir una mica d’aigua a la picada, barrejar i reservar.",
@@ -827,6 +916,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/03/guacamole-610x347.jpg",
         "title": "Guacamole",
         "people": "per a 2 persones",
         "ingredients": [
@@ -836,7 +926,9 @@
             "sal",
             "oli d’oliva"
         ],
-        "time": "5 min",
+        "time": [
+            "5 min"
+        ],
         "preparation": [
             "Tallar l’alvocat transversalment, treure el pinyol i buidar amb una cullera.",
             "Posar l’alvocat en un bol i triturar amb una forquilla.",
@@ -867,6 +959,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/03/makis_crudivegans-610x347.jpg",
         "title": "Makis crudivegans",
         "people": "per a 2 persones",
         "ingredients": [
@@ -877,7 +970,9 @@
             "1 pastanaga",
             "1/2 cogombre"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Triturar la coliflor fins que sembli petits grans d’arròs (sense passar-se, que no quedi una pasta).",
             "Pelar la pastanaga, el cogombre i l’alvocat i tallar a tires. Tallar el tomàquet a tires.",
@@ -886,9 +981,13 @@
             "Mullar la part final de l’alga abans d’acabar d’enrotllar per a que s’enganxi.",
             "Tallar amb un ganivet mullat en unes 5-7 parts."
         ],
-        "notes": [
+        "presentation": [
             "Servir acompanyat d’un bol amb salsa de soja i una punteta de wasabi.",
             "També es pot servir amb una mica d’allioli."
+        ],
+        "notes": [
+            "Els japonesos ho serveixen amb làmines de gingebre, per treure el sabor entre maki i maki.",
+            "Els celíacs vigileu amb la salsa de soja que n’hi ha que porten blat."
         ],
         "categories": [
             "Cuina Asiàtica",
@@ -906,6 +1005,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/03/pasta_salsa_tomaquet_pastanaga2-610x347.jpg",
+        "blockquote": [
+            "Una bona manera de canviar el típic sofregit de tomàquet i ceba"
+        ],
         "title": "Pasta amb salsa de tomàquet i pastanaga",
         "people": "per a 2 persones",
         "ingredients": [
@@ -917,7 +1020,9 @@
             "orenga",
             "julivert"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Posar a bullir la pasta en aigua salada.",
             "Ratllar els tomàquets. Reservar en un bol.",
@@ -944,6 +1049,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/03/focaccia-610x347.jpg",
         "title": "Focaccia d’olives",
         "people": "per a 4 persones",
         "ingredients": [
@@ -955,7 +1061,9 @@
             "95 g d’aigua a temperatura ambient",
             "olives (al gust)"
         ],
-        "time": "5 h",
+        "time": [
+            "5 h"
+        ],
         "preparation": [
             "En un bol gran barrejar la farina de blat, la sal, el sucre i de llevat esmicolat.",
             "Afegir l’oli i a poc a poc anar afegint l’aigua mentres es remena amb una forquilla.",
@@ -990,19 +1098,15 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/salsa-romesco-610x347.jpg",
+        "blockquote": [
+            "La salsa romesco o salvitxada és una salsa típica del Camp de Tarragona.",
+            "Hi ha moltes variacions, depèn dels gustos de cadascú. Hi ha qui li posa avellanes, all cru, més o menys oli…",
+            "Cada família té els seus “trucs” o “secrets”.",
+            "Aquesta recepta és de la meva família de Tarragona."
+        ],
         "title": "Salsa romesco",
         "people": "per a 5-6 persones",
-        "ingredients": [
-            "4 tomàquets",
-            "100 g d’ametlles torrades",
-            "1 pebrot sec de romesco (o nyora)",
-            "1 dent d’all",
-            "1 llesca de pa (opcional)",
-            "1 cullerada de vinagre de vi",
-            "sal",
-            "oli d’oliva"
-        ],
-        "time": "45 min",
         "preparation": [
             "Treure les llavors del pebrot sec i posar en un bol en remull uns 10-15 min.",
             "Mentrestant, escalivar els tomàquets i l’all directament al foc (dels fogons).",
@@ -1033,6 +1137,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/03/batut-de-fruites-i-espinacs-610x347.jpg",
+        "blockquote": [
+            "Això si que és l’esmorzar dels campions!"
+        ],
         "title": "Batut de fruites i espinacs",
         "people": "per a 2 persones",
         "ingredients": [
@@ -1043,7 +1151,9 @@
             "1 cullerada de suc de llimona",
             "2 cullerades (o al gust) de xarop d’atzavara (“agave” en castellà)"
         ],
-        "time": "5 min",
+        "time": [
+            "5 min"
+        ],
         "preparation": [
             "Tallar l’alvocat transversalment, treure l’os i buidar amb una cullera.",
             "Pelar el plàtan i tallar el barret de les maduixes.",
@@ -1070,6 +1180,11 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/03/hamburgueses_quinoa_algues-610x347.jpg",
+        "blockquote": [
+            "Aquestes hamburgueses es poden fer tant al forn, com a la planxa, com fregides.",
+            "Per bullir la quinoa s’utilitza una proporció d’1 a 2.\n(1 got de quinoa = 2 gots d’aigua)"
+        ],
         "title": "Hamburgueses de quinoa i algues",
         "people": "per a 10-12 hamburgueses",
         "ingredients": [
@@ -1080,7 +1195,9 @@
             "1 pebrot vermell",
             "200 g de pa ratllat"
         ],
-        "time": "1:30 h (+ nevera)",
+        "time": [
+            "1:30 h (+ nevera)"
+        ],
         "preparation": [
             "Escalivar les albergínies i el pebrot (1 h).",
             "Posar les algues en un bol amb aigua calenta uns 10 min a hidratar.",
@@ -1117,6 +1234,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/02/mousse-raw1-610x347.jpg",
         "title": "Mousse crudivegana d’alvocat i cacau",
         "people": "per a 4 persones",
         "ingredients": [
@@ -1124,7 +1242,9 @@
             "80-100 g de cacau en pols",
             "100 ml de xarop d’atzavara (“agave” en castellà)"
         ],
-        "time": "5 min (+ nevera)",
+        "time": [
+            "5 min (+ nevera)"
+        ],
         "preparation": [
             "Tallar els alvocats transversalment, treure l’os i buidar amb una cullera.",
             "Posar els alvocats a la batedora i batre.",
@@ -1132,8 +1252,11 @@
             "Corregir de cacau o de xarop per si es vol més o menys amarg o dolç.",
             "Deixar reposar 1-2 h a la nevera."
         ],
-        "notes": [
+        "presentation": [
             "Servir en un got amb unes rodanxes de maduixa per damunt."
+        ],
+        "notes": [
+            "Es pot canviar el xarop d’atzavara pel d’auró (“arce” en castellà) o simplement per sucre (però deixa de ser una recepta crua)."
         ],
         "categories": [
             "Berenars",
@@ -1151,6 +1274,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/02/pate_tomaquets_secs-610x347.jpg",
         "title": "Paté de tomàquets secs",
         "people": "per a 8-10 persones",
         "ingredients": [
@@ -1162,7 +1286,9 @@
             "500 g de llegums cuites (cigrons, mongetes, llenties…)",
             "150-200 g d’olives negres (opcional)"
         ],
-        "time": "5 min (més el temps de preparació dels tomàquets secs)",
+        "time": [
+            "5 min (més el temps de preparació dels tomàquets secs)"
+        ],
         "preparation": [
             "Posar els tomàquets en un bol amb aigua uns 15-20 min a hidratar.",
             "En un pot de vidre posar els tomàquets hidratats, l’all, el julivert i l’orenga (al gust) i cobrir amb oli d’oliva. Deixar 1 dia perquè s’impregnin bé tots els gustos.",
@@ -1191,6 +1317,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/seitan-salsa-ametlles-610x347.jpg",
         "title": "Seitan amb salsa d’ametlles",
         "people": "per a 2 persones",
         "ingredients": [
@@ -1199,7 +1326,9 @@
             "ametlles mòltes",
             "250 ml de crema de llet de civada (o soia)"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Tallar el seitan a rodanxes suficientment gruixudes per a poder fer un tall per la meitat (sense arribar al final) i omplir amb una cullerada d’ametlles mòltes.",
             "Trossejar la ceba molt fina (o fins i tot triturar) i sofregir en una paella amb una mica d’oli.",
@@ -1225,6 +1354,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/escalivada-610x347.jpg",
         "title": "Escalivada",
         "people": "per a 4 persones",
         "ingredients": [
@@ -1233,7 +1363,9 @@
             "2-3 cebes (opcional)",
             "2-3 tomàquets (opcional)"
         ],
-        "time": "1h",
+        "time": [
+            "1h"
+        ],
         "preparation": [
             "Preescalfar el forn a 180 ºC.",
             "Rentar les albergínies, el pebrot i els tomàquets. Pelar les cebes. Fer uns talls a l’albergínia.",
@@ -1244,8 +1376,11 @@
             "Un cop fredes, pelar les albergínies i els pebrots (i la capa exterior de la ceba si s’ha socarrimat), treure les llavors dels pebrots i escórrer.",
             "Tallar a tires, posar en un plat amb una mica de l’oli de la safata i salpebrar al gust."
         ],
-        "notes": [
+        "presentation": [
             "Servir amb una torrada de pa de pagès amb tomàquet i una mica d’all (opcional)."
+        ],
+        "notes": [
+            "Si sobre albergínia es pot aprofitar i fer una crema d’albergínies (Mutabal/Baba Ghanoush)."
         ],
         "categories": [
             "Cuina Tradicional",
@@ -1260,6 +1395,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/01/pasta_a_la_carbonara2-610x347.jpg",
         "title": "Pasta a la carbonara vegana",
         "people": "per a 2 persones",
         "ingredients": [
@@ -1270,7 +1406,9 @@
             "sal",
             "pebre negre"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Bullir la pasta en una olla amb aigua salada.",
             "Tallar la ceba a daus petits i sofregir en una paella amb oli.",
@@ -1298,6 +1436,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/01/carxofes_mongetes_romesco-610x347.jpg",
         "title": "Carxofes i mongetes amb salsa romesco",
         "people": "per a 2 persones",
         "ingredients": [
@@ -1305,7 +1444,9 @@
             "400 g de mongetes blanques",
             "1 cullerada de salsa romesco (o al gust)"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Pelar les carxofes (treure les fulles exteriors) fins a arribar a les fulles més clares.",
             "Tallar les puntes de les fulles i deixar només “el cor”. Tallar en 6 parts.",
@@ -1327,6 +1468,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/01/cookies_veganes_xocolata-610x347.jpg",
+        "blockquote": [
+            "* 1 tassa = 1 got de tota la vida = 240 ml aprox."
+        ],
         "title": "Cookies veganes de xocolata",
         "people": "per a 18-20 cookies",
         "ingredients": [
@@ -1341,7 +1486,9 @@
             "1 de tassa* d’oli d’oliva",
             "1/4 de tassa* d’aigua (o de qualsevol llet vegetal)"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Preescalfar el forn a 180ºC.",
             "En un bol gran barrejar la farina de blat, el llevat, el cacau, la sal i la canyella. Afegir la xocolata trossejada.",
@@ -1376,6 +1523,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/01/tallarines_bolets_llet_coco-610x347.jpg",
         "title": "Tallarines d’arròs amb bolets i llet de coco al toc de llima",
         "people": "per a 4 persones",
         "ingredients": [
@@ -1391,7 +1539,9 @@
             "10-12 fulles d’alfàbrega fresca",
             "250 ml de llet de coco"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Bullir les tallarines (depenent del fabricant, llegir les instruccions) i escórrer.",
             "Posar els bolets en un bol amb aigua durant 10-15 min a hidratar.",
@@ -1424,6 +1574,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/01/rollitos_arros_shiitake-610x347.jpg",
         "title": "Rotllets d’arròs amb bolets xiitake",
         "people": "per a 8-10 rotllets",
         "ingredients": [
@@ -1434,7 +1585,9 @@
             "2 cullerades de salsa de soia",
             "1 cullerada d’oli de sèsam"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Posar els bolets xiitake en un bol amb aigua calenta uns 10-15 min a hidratar.",
             "Pelar i picar els alls.",
@@ -1470,6 +1623,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/01/hamburguesa_civada_shiitake-610x347.jpg",
+        "blockquote": [
+            "Aquestes hamburgueses es poden fer tant al forn, com a la planxa, com fregides."
+        ],
         "title": "Hamburgueses de civada i bolets xiitake",
         "people": "per a 5-7 hamburgueses",
         "ingredients": [
@@ -1479,7 +1636,9 @@
             "1 dent d’all",
             "julivert"
         ],
-        "time": "45 min",
+        "time": [
+            "45 min"
+        ],
         "preparation": [
             "Preescalfar el forn a 180-200ºC.",
             "Posar els bolets xiitake en un bol amb aigua calenta uns 10 min per a hidratar.",
@@ -1491,9 +1650,13 @@
             "Posar les hamburgueses a la safata del forn amb paper vegetal (especial per a forn).",
             "Posar al forn 10 min, girar les hamburgueses i 10 min més."
         ],
-        "notes": [
+        "presentation": [
             "Servir  amb pa d’hamburguesa, enciam, tomàquet i ceba i les salses que es vulgui.",
             "Servir en un plat acompanyat d’una amanida."
+        ],
+        "notes": [
+            "És millor deixar refredar la massa a la nevera 1-2 h com a mínim perquè la massa quedi més compacta. Si es fan les hamburgueses directament, s’ha de vigilar que no es desmuntin.",
+            "Al forn queden molt millor i més compactes."
         ],
         "categories": [
             "Cuina Americana",
@@ -1510,6 +1673,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/12/sopa_ceba-610x347.jpg",
         "title": "Sopa de ceba",
         "people": "per a 4 persones",
         "ingredients": [
@@ -1518,7 +1682,9 @@
             "2 cullerades de margarina",
             "2-3 cullerades de farina de blat de moro"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Fondre la margarina en una olla.",
             "Tallar les cebes en juliana i sofregir a la olla uns 10-15 min a foc mitjà.",
@@ -1544,6 +1710,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/hummus-610x347.jpg",
+        "blockquote": [
+            "Crema de cigrons.\nÉs un entrant típic de la cuina Àrab/Nord-africana com\nel Mutabal o Baba Ghanoush."
+        ],
         "title": "Hummus",
         "people": "per a una festa",
         "ingredients": [
@@ -1556,14 +1726,20 @@
             "sal (al gust)",
             "oli d’oliva"
         ],
-        "time": "5 min",
+        "time": [
+            "5 min"
+        ],
         "preparation": [
             "Posar tots els ingredients (cigrons, tahini, all, pebre vermell dolç, comí, suc de llimona i sal) en un got de batedora i afegir oli d’oliva fins a cobrir.",
             "Triturar fins a obtenir una puré sense grumolls."
         ],
-        "notes": [
+        "presentation": [
             "Servir en un plat en forma de volcà, escampar una mica de pebre vermell dolç per damunt i tirar un raig d’oli d’oliva.",
             "Acompanyar amb pa de pita."
+        ],
+        "notes": [
+            "Depenent de l’espessor desitjat, afegir més o menys oli d’oliva.",
+            "També es pot triturar una mica de julivert fresc i escampar per damunt."
         ],
         "categories": [
             "Cuina Àrab / Nord-africana",
@@ -1582,6 +1758,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/12/pancakes-610x347.jpg",
         "title": "Pancakes vegans",
         "people": "per a 4-5 pancakes",
         "ingredients": [
@@ -1593,7 +1770,9 @@
             "1 cullerada d’oli",
             "1 culleradeta d’aroma de vainilla"
         ],
-        "time": "15 min",
+        "time": [
+            "15 min"
+        ],
         "preparation": [
             "En un bol gran barrejar la farina de blat, el llevat i la canyella.",
             "En una altre bol barrejar la llet de soia, l’aroma de vainilla, el sucre i l’oli.",
@@ -1601,8 +1780,13 @@
             "Posar una paella a foc mitjà, quan estigui calenta, abocar la massa (amb l’ajuda d’un cullerot, per exemple, per a mantenir les mesures).",
             "Quan la massa comenci a fer bombolles, donar la volta i fer per l’altra banda."
         ],
-        "notes": [
+        "presentation": [
             "Servir amb xarop d’auró (“arce” en castellà), nèctar d’Agave, xocolata desfeta, melmelada, etc.\n"
+        ],
+        "notes": [
+            "A la massa se li pot afegir talls de fruita per donar-li un toc més gustós.",
+            "La llet de soia es pot substituir per qualsevol altra llet vegetal.",
+            "La farina de blat es pot substituir perfectament per una altra sense gluten."
         ],
         "categories": [
             "Berenars",
@@ -1623,6 +1807,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/11/arros_amb_bolets-610x347.jpg",
         "title": "Arròs amb bolets",
         "people": "per a 4 persones",
         "ingredients": [
@@ -1633,7 +1818,9 @@
             "julivert",
             "oli d’oliva, sal i pebre negre"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Rentar els bolets.",
             "Bullir els bolets en una olla amb uns 2 l d’aigua salada durant 5 min. Reservar el brou.",
@@ -1662,6 +1849,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/11/cookies-610x347.jpg",
+        "blockquote": [
+            "* 1 tassa = 1 got de tota la vida = 240 ml aprox."
+        ],
         "title": "Cookies veganes amb llavors de xocolata",
         "people": "per a 15 cookies",
         "ingredients": [
@@ -1675,7 +1866,9 @@
             "1/2 de tassa* d’oli d’oliva",
             "1/4 de tassa* d’aigua (o de qualsevol llet vegetal)"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Preescalfar el forn a 180ºC.",
             "En un bol gran barrejar la farina de blat, el llevat, la sal i la canyella. Afegir la xocolata trossejada.",
@@ -1709,6 +1902,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/11/espaguetis_puttanesca-600x347.jpg",
+        "blockquote": [
+            "Un plat típic del sud d’Itàlia  molt ràpid de preparar i\nque està molt bo tant fred com calent."
+        ],
         "title": "Espaguetis a la puttanesca",
         "people": "per a 2 persones",
         "ingredients": [
@@ -1723,7 +1920,9 @@
             "1 cullerada de farina de blat de moro (opcional)",
             "1 culleradeta de sucre"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Posar a bullir els espaguetis en aigua salada uns 7-8 min (perquè quedin al dente).",
             "Ratllar els tomàquets i reservar.",
@@ -1755,6 +1954,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/panellets-610x347.jpg",
         "title": "Panellets",
         "people": "per a 25 panellets",
         "ingredients": [
@@ -1762,7 +1962,9 @@
             "200 g de sucre",
             "1 patata gran"
         ],
-        "time": "1h",
+        "time": [
+            "1h"
+        ],
         "preparation": [
             "Preescalfar el forn a 180ºC.",
             "Pelar  la patata i posar a bullir durant 18-20 min.",
@@ -1788,6 +1990,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/08/magdalenes_platan-610x347.jpg",
         "title": "Muffins de plàtan",
         "people": "per a unes 24 muffins",
         "ingredients": [
@@ -1801,7 +2004,9 @@
             "1 culleradeta de sal",
             "1 culleradeta d’aroma de vainilla"
         ],
-        "time": "18-20 min",
+        "time": [
+            "18-20 min"
+        ],
         "preparation": [
             "Preescalfar el forn a 180ºC.",
             "En un bol, barrejar tots els ingredients secs (farina de blat, sucre, llevat, bicarbonat i sal).",
@@ -1836,6 +2041,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/08/magdalenes_poma-610x347.jpg",
         "title": "Muffins de poma",
         "people": "per a unes 24 muffins",
         "ingredients": [
@@ -1849,7 +2055,9 @@
             "1 culleradeta de sal",
             "1 culleradeta d’aroma de vainilla"
         ],
-        "time": "18-20 min",
+        "time": [
+            "18-20 min"
+        ],
         "preparation": [
             "Preescalfar el forn a 180ºC.",
             "En un bol, barrejar tots els ingredients secs (farina de blat, sucre, llevat, bicarbonat i sal).",
@@ -1883,6 +2091,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/08/magdalenes_xocolata-610x347.jpg",
         "title": "Muffins de xocolata",
         "people": "per a unes 24 muffins",
         "ingredients": [
@@ -1896,7 +2105,9 @@
             "1 culleradeta d’aroma de vainilla",
             "50 g cacau en pols (o farina de garrofa)"
         ],
-        "time": "18-20 min",
+        "time": [
+            "18-20 min"
+        ],
         "preparation": [
             "Preescalfar el forn a 180ºC.",
             "En un bol, barrejar tots els ingredients secs (farina de blat, sucre, llevat, bicarbonat, sal i cacau).",
@@ -1928,6 +2139,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/10/amanida_arros-610x347.jpg",
+        "blockquote": [
+            "Les algues comestibles són les verdures del mar"
+        ],
         "title": "Amanida d’arròs i algues amb veganesa",
         "people": "per a 3-4 persones",
         "ingredients": [
@@ -1941,9 +2156,16 @@
             "1 cogombre",
             "olives",
             "llevat de cervesa (opcional)",
-            "i tot el què es vulgui (blat de moro, enciam, pebrot…)"
+            "i tot el què es vulgui (blat de moro, enciam, pebrot…)",
+            "2 tasses de cafè de llet de soia",
+            "4 tasses de cafè  d’oli de gira-sol",
+            "1 dent d’all",
+            "2 culleradetes de sal",
+            "4 culleradetes de suc de llimona"
         ],
-        "time": "2 tasses de cafè de llet de soia4 tasses de cafè  d’oli de gira-sol1 dent d’all2 culleradetes de sal4 culleradetes de suc de llimona",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Bullir l’arròs entre 18-20 min.",
             "Remullar un grapat d’algues en aigua calenta durant uns 10 min.",
@@ -1955,7 +2177,7 @@
             "Barrejar tot i deixar refredar una estona a la nevera."
         ],
         "notes": [
-            "20 min"
+            "Escampar una cullerada de llevat de cervesa (opcional)."
         ],
         "categories": [
             "Cuina Tradicional",
@@ -1984,6 +2206,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/10/llenties-610x347.jpg",
         "title": "Estofat de llenties",
         "people": "per a 2-3 persones",
         "ingredients": [
@@ -1995,7 +2218,9 @@
             "1 dent d’all (opcional)",
             "1 fulla de llorer"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Tallar la ceba i la pastanaga a daus petits i sofregir en una olla amb oli uns 5 min (afegir l’all a l’últim minut, opcional).",
             "Afegir el tomàquet ratllat i sofregir entre 5-7 min.",
@@ -2018,6 +2243,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/09/gazpacho-610x347.jpg",
         "title": "Gaspatxo",
         "people": "per a 3-4 persones",
         "ingredients": [
@@ -2031,7 +2257,9 @@
             "sal",
             "aigua (opcional)"
         ],
-        "time": "5 min (+ 1h nevera)",
+        "time": [
+            "5 min (+ 1h nevera)"
+        ],
         "preparation": [
             "Rentar, trossejar i batre tots els ingredients.",
             "Afegir aigua depenent de l’espessor desitjat.",
@@ -2057,6 +2285,12 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/09/mousse_xocolata-610x347.jpg",
+        "blockquote": [
+            "Amb aquestes postres sereu els reis de la festa! Fàcils, ràpides i mooolt bones!",
+            "En aquesta recepta s’utilitza tofu suau o tou. Es pot trobar fàcilment a botigues d’alimentació asiàtiques.",
+            "La xocolata pot ser negre o amb llet (vegetal), depenent dels gustos de cadascú."
+        ],
         "title": "Mousse de xocolata vegana",
         "people": "per a 3-4 persones",
         "ingredients": [
@@ -2064,7 +2298,9 @@
             "150g de xocolata",
             "sucre (al gust i opcional)"
         ],
-        "time": "5 min (+ 2h nevera)",
+        "time": [
+            "5 min (+ 2h nevera)"
+        ],
         "preparation": [
             "En una cassola, desfer la xocolata a foc lent. Anar remenant per evitar que es cremi. Reservar.",
             "Posar el tofu a la batedora i batre fins a obtenir una textura suau.",
@@ -2089,6 +2325,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/09/vichyssoise-610x347.jpg",
         "title": "Vichyssoise (crema de porro)",
         "people": "per a 3-4 persones",
         "ingredients": [
@@ -2098,7 +2335,9 @@
             "1 got de llet de soia (opcional)",
             "1 cullerada de margarina (o 2 cullerades d’oli d’oliva)"
         ],
-        "time": "25 min (+ nevera)",
+        "time": [
+            "25 min (+ nevera)"
+        ],
         "preparation": [
             "Pelar i tallar la ceba i les patates a daus.",
             "En una olla, posar la margarina i sofregir la ceba durant un parell de minuts. Afegir les patates i sofregir 2 min més.",
@@ -2107,8 +2346,12 @@
             "Triturar amb la batedora, afegir el got de llet de soia (opcional), salpebrar al gust i acabar de triturar.",
             "Deixar refredar a la nevera."
         ],
-        "notes": [
+        "presentation": [
             "Servir ben freda en un bol o plat fons."
+        ],
+        "notes": [
+            "Es pot servir amb un rajolí d’oli d’oliva o amb uns “picatostes”.",
+            "Es pot canviar la llet de soia per qualsevol altra llet vegetal o aigua."
         ],
         "video": "http://player.vimeo.com/video/48916533",
         "categories": [
@@ -2127,6 +2370,11 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/09/veganesa-610x347.png",
+        "blockquote": [
+            "Estrenem nova secció: Salses!",
+            "I què millor que acompanyar-ho d’un vídeo  "
+        ],
         "title": "Veganesa (maionesa vegetal)",
         "people": "per a 2 persones",
         "ingredients": [
@@ -2136,7 +2384,9 @@
             "1 culleradeta de sal",
             "1/4 de dent d’all (opcional)"
         ],
-        "time": "5 min",
+        "time": [
+            "5 min"
+        ],
         "preparation": [
             "En el got de la batedora posar la llet de soja, 1 tassa d’oli i la sal (l’all també, si es vol).",
             "Batre durant 1 min. Afegir l’altra tassa d’oli i batre un altre minut.",
@@ -2157,6 +2407,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/09/croquetes_espinacs-610x347.jpg",
+        "blockquote": [
+            "Les croquetes són un plat típic per aprofitar les sobres del dia anterior."
+        ],
         "title": "Croquetes d’espinacs i pinyons",
         "people": "per a 8-10 croquetes",
         "ingredients": [
@@ -2170,7 +2424,6 @@
             "nou moscada (opcional)",
             "pa ratllat"
         ],
-        "time": "",
         "preparation": [
             "Bullir els espinacs 1 min.",
             "Sofregir la ceba i l’all tallats a daus petits en una paella amb oli (primer la ceba, quan estigui daurada, afegir l’all). Incorporar els espinacs i els pinyons. Sofregir tot junt amb una mica de sal durant 2-3 min.",
@@ -2200,6 +2453,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/09/mutabal-610x347.jpg",
+        "blockquote": [
+            "Crema d’albergínies.\nEntrant típic de la cuina Àrab/Nord-africana com l’Hummus.\nDepenent del país, rep un nom o l’altre."
+        ],
         "title": "Mutabal o Baba Ghanoush",
         "people": "per a 2 persones",
         "ingredients": [
@@ -2209,16 +2466,23 @@
             "1 culleradeta de suc de llimona (o al gust)",
             "1 culleradeta de comí en pols"
         ],
-        "time": "1h",
+        "time": [
+            "1h"
+        ],
         "preparation": [
             "Precalentar el forn a 180ºC.",
             "Posar l’albergínia al forn durant entre 45 min i 1h. Anar donant voltes de tant en tant fins que la pell estigui “socarrimada”.",
             "Treure la pell (vigilar que crema!), treure la polpa amb una cullera i escórrer.",
             "Posar la polpa, l’all tallat, el tahini, el suc de llimona i el comí en un got de batre. Triturar fins a obtenir un puré. Salpebrar al gust."
         ],
-        "notes": [
+        "presentation": [
             "Servir en un plat en forma de volcà i tirar un raig d’oli d’oliva.",
             "Acompanyar amb pa de pita."
+        ],
+        "notes": [
+            "Les albergínies també es poden fer durant 10 min al microones.",
+            "Depenent de l’espessor desitjat, afegir més o menys oli d’oliva.",
+            "També es pot triturar una mica de julivert fresc i escampar per damunt."
         ],
         "categories": [
             "Cuina Àrab / Nord-africana",
@@ -2236,6 +2500,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/mandonguilles-seitan-610x347.jpg",
         "title": "Mandonguilles de seitan",
         "people": "per a 8-10 mandonguilles",
         "ingredients": [
@@ -2246,7 +2511,9 @@
             "farina de blat",
             "aigua"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Tallar el seitan i l’all a daus petits i triturar juntament amb unes fulles de julivert.",
             "Preparar la barreja de farina i aigua (a mode d’ou) amb 2 cullerades de farina i 4 d’aigua freda i avocar al seitan triturat.",
@@ -2274,6 +2541,16 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/08/croquetes_quinoa_pastanaga1-610x347.jpg",
+        "blockquote": [
+            "La quinoa és un pseudo cereal provinent d’Amèrica del Sud.",
+            "Conté:",
+            "alt contingut en proteïna",
+            "aminoàcids essencials",
+            "fibra, magnesi i ferro",
+            "NO conté GLUTEN.",
+            "Per bullir la quinoa s’utilitza una proporció d’1 a 2.\n(1 got de quinoa = 2 gots d’aigua)"
+        ],
         "title": "Croquetes de quinoa i pastanaga",
         "people": "per a 20-25 croquetes",
         "ingredients": [
@@ -2286,7 +2563,9 @@
             "2 cullerades d’aigua",
             "pa ratllat"
         ],
-        "time": "35 min",
+        "time": [
+            "35 min"
+        ],
         "preparation": [
             "Posar la quinoa en un colador (amb els forats més petits que els grans de quinoa) sota l’aixeta i rentar fins que l’aigua surti clara.",
             "Bullir en una olla amb aigua salada durant 15-20 min. Reservar.",
@@ -2315,20 +2594,34 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/08/flam-610x347.jpg",
+        "blockquote": [
+            "En aquesta recepta s’utilitza llet de soia amb gust a vainilla.",
+            "En el cas de no tenir-ne, es pot utilitzar llet de soia normal i calentar en una olla amb una vaina de vainilla perquè n’agafi el gust.",
+            "També es pot afegir tofu tou (estil japonès) triturat a la barreja, però no s’acaba de desfer del tot, així doncs no el farem servir."
+        ],
         "title": "Flam de vainilla vegà",
         "people": "per a 6-8 racions",
         "ingredients": [
-            "per al caramel:"
+            "per al caramel:",
+            "240 g de sucre morè",
+            "60 ml aigua",
+            "per al flam:",
+            "120 ml d’aigua",
+            "2 culleradetes d’agar-agar en pols",
+            "720ml de llet de soia (gust a vainilla)",
+            "240g tofu tou (opcional)*",
+            "120 g de sucre morè"
         ],
-        "time": "240 g de sucre morè60 ml aigua",
-        "preparation": [
-            "Posar l’aigua i el sucre en una olla i portar a ebullició.",
-            "Baixar el foc a mitjà/lent i deixar durant 10-15 min  sense remoure.",
-            "Quan estigui llest, abocar als motlles i amb molt de compte (crema molt!!) escampar per tot el motlle amb un pinzell o movent el motlle circularment fins que quedi ben repartit.",
-            "Deixar refredar els motlles."
+        "time": [
+            "30 min (+4h)"
+        ],
+        "presentation": [
+            "Per servir, donar la volta als motlles en un plat.",
+            "Si es queden enganxats, banyar els motlles en aigua calenta per ajudar a que es desenganxin."
         ],
         "notes": [
-            "per al flam:"
+            "Si es té nata de soia, se li pot posar una mica per sobre  "
         ],
         "categories": [
             "Cuina Tradicional",
@@ -2345,6 +2638,12 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/08/truita_patates1-610x347.jpg",
+        "blockquote": [
+            "En aquesta recepta us explicarem com fer una truita de patates\nsense ous.",
+            "L’ingredient bàsic és la farina, en aquest cas, de cigró i de blat de moro, pel seu efecte aglutinant.",
+            "Com que aquestes farines no porten gluten, és una recepta apta per a celíacs  "
+        ],
         "title": "Truita de patates vegana",
         "people": "per a 4 persones",
         "ingredients": [
@@ -2357,7 +2656,9 @@
             "2 culleradetes de sal",
             "oli d’oliva"
         ],
-        "time": "45 min",
+        "time": [
+            "45 min"
+        ],
         "preparation": [
             "Pelar i rentar les patates i les cebes. Tallar a daus petits.",
             "Rentar i tallar el carbassó a tires curtes i fines.",
@@ -2394,6 +2695,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/cus-cus-610x347.jpg",
         "title": "Cuscús de verdures i seitan",
         "people": "per a 4 persones",
         "ingredients": [
@@ -2408,16 +2710,8 @@
             "1 cullerada de margarina vegetal",
             "suc de llimona"
         ],
-        "time": "30 min",
-        "preparation": [
-            "Posar a bullir la mongeta tendra durant 10 min.",
-            "Tallar la ceba i els xampinyons i sofregir en una paella amb oli.",
-            "Quan la ceba comenci a estar daurada, afegir la pastanaga, el carbassó i els tomàquets.",
-            "Tallar el seitan i afegir, juntament amb la mongeta tendra, a la paella amb la resta d’ingredients.",
-            "Deixar que s’acabi de fer tot i  afegir aigua (bullint) fins a cobrir. Deixar uns 15 min (o fins que s’acabi l’aigua) a foc lent. Reservar."
-        ],
-        "notes": [
-            "verdures:"
+        "time": [
+            "30 min"
         ],
         "categories": [
             "Cuina Àrab / Nord-africana",
@@ -2438,25 +2732,26 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/carbasso-tahini-610x347.jpg",
+        "blockquote": [
+            "És un plat típic àrab i es pot servir com a entrant (per compartir) o com a principal.",
+            "El tahini (o tahina) és un puré de sèsam que s’utilitza molt en salses, però es pot utilizar com a substitut de la mantega (de cacahuet) per a les torrades.\nEs troba a les herboristeries o botigues ecològiques i pot ser torrat o blanc, amb sal o sense."
+        ],
         "title": "Carbassó amb salsa de tahini",
         "people": "per a 2 persones",
         "ingredients": [
             "1 carbassó",
-            "1/2 tomàquet"
-        ],
-        "time": "(per a la salsa)",
-        "preparation": [
-            "Rentar i tallar el carbassó a rodanxes molt fines.",
-            "Fregir en una paella amb suficient oli d’oliva per a cobrir les làmines de carbassó.",
-            "Rentar i tallar el mig tomàquet a daus i reservar."
-        ],
-        "notes": [
+            "1/2 tomàquet",
+            "(per a la salsa)",
             "2 cullerades de tahini (blanc, sense sal)",
             "suc de llimona",
             "1/2 dent d’all",
             "25 g de nous (2-3)",
             "julivert",
             "aigua"
+        ],
+        "time": [
+            "10 min"
         ],
         "categories": [
             "Cuina Àrab / Nord-africana",
@@ -2477,20 +2772,29 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/mochi-daifuku-610x347.jpg",
+        "blockquote": [
+            "El Mochi és un postre típic Japonès, sobretot al cap d’any. Està fet a base de farina d’arròs glutinós. Un dels seus usos és per a fer Daifuku (mochi és només la pasta d’arròs).",
+            "El Daifuku està farcit amb Anko, una pasta a base de mongetes vermelles anomenades Azuki.",
+            "Tots aquests ingredients es poden trobar fàcilment a supermercats asiàtics i fins i tot a algunes herboristeries."
+        ],
         "title": "Mochi amb anko dolç (Daifuku)",
         "people": "8-10 daifukus",
         "ingredients": [
-            "(per al mochi)"
+            "(per al mochi)",
+            "100 g de farina d’arròs glutinós",
+            "50 g de sucre",
+            "250 ml d’aigua",
+            "farina d’arròs (per a escampar)",
+            "(per a l’anko)",
+            "150 g de mongetes azuki",
+            "75 g de sucre"
         ],
-        "time": "100 g de farina d’arròs glutinós50 g de sucre250 ml d’aiguafarina d’arròs (per a escampar)",
-        "preparation": [
-            "En un recipient barrejar l’aigua i el sucre.",
-            "Afegir la farina d’arròs glutinós i tornar a barrejar fins que no quedin grumolls.",
-            "Posar el recipient al microones, tapat amb paper film, durant 2 min. Treure del microones i remoure estant encara calent. Repetir el procés.",
-            "Escampar farina d’arròs (no glutinós) pel marbre i deixar refredar la massa fins que ja no enganxi (30 min)."
+        "time": [
+            "1:30h"
         ],
         "notes": [
-            "(per a l’anko)"
+            "La pasta de farina d’arròs glutinós (tal i com el seu nom indica) és molt enganxosa. Escampar tanta farina d’arròs com sigui necessari per que no s’enganxi (no fa mal  )."
         ],
         "categories": [
             "Cuina Asiàtica",
@@ -2506,8 +2810,12 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/makis-alvocat-tomaquet-610x347.jpg",
+        "blockquote": [
+            "El sushi és la manera de fer l’arròs a l’estil japonès (amb vinagre d’arròs, sucre i sal), acompanyat de peixos, mariscos, verdures o ou.",
+            "Quan es serveix enrotllat amb alga nori, s’anomena maki (makizushi)."
+        ],
         "title": "Makis d’alvocat i tomàquet",
-        "people": "",
         "ingredients": [
             "2 tasses d’arròs japonès",
             "4 cullerades de vinagre d’arròs",
@@ -2517,7 +2825,9 @@
             "1 tomàquet",
             "4 làmines d’algua nori"
         ],
-        "time": "45 min",
+        "time": [
+            "45 min"
+        ],
         "preparation": [
             "En una paella o olla petita barrejar i escalfar el vinagre d’arròs amb el sucre i la sal fins que aquests últims es dissolguin (sense deixar que el vinagre bulli). Reservar.",
             "Netejar l’arròs amb aigua freda fins que l’aigua surti neta (diverses vegades, fins que no quedi midó a l’arròs). Deixar en remull uns 15 min.",
@@ -2549,21 +2859,12 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/sopa-miso-610x347.jpg",
+        "blockquote": [
+            "La sopa de miso és un dels plats bàsics en la gastronomia japonesa."
+        ],
         "title": "Sopa de miso",
-        "people": "El miso és una pasta aromatitzant, fermentada a base de llavors de soja i sal.",
-        "ingredients": [
-            "conté enzims que ajuden en la digestió.",
-            "carbohidrats, lípids, vitamines, minerals i proteïnes."
-        ],
-        "time": "Shiroimiso (miso blanc)Akamiso (miso vermell)Kuromiso (miso negre)",
-        "preparation": [],
-        "notes": [
-            " cebollí",
-            "1/4 de bloc de tofu (75 g)",
-            "alga kombu (3-4 tires)",
-            "aigua (1 got per persona)",
-            "miso (1 cullerada per cada 1/4 l d’aigua)"
-        ],
+        "people": "per a 4 persones",
         "categories": [
             "Cuina Asiàtica",
             "Entrants",
@@ -2579,20 +2880,9 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/06/filets_tofu_curry-610x347.jpg",
         "title": "Filets de tofu amb curri",
         "people": "per a 3-4 persones",
-        "ingredients": [
-            "1 bloc de tofu japonès (250-300g)",
-            "arròs japonès",
-            "1 ceba",
-            "2 tomàquets",
-            "2 dents dents d’all",
-            "2 cullerades de curri",
-            "350 ml de llet de coco",
-            "350 ml d’aigua",
-            "1-2 cullerades de farina de blat de moro"
-        ],
-        "time": "45 min",
         "preparation": [
             "Bullir l’arròs 18-20 min.",
             "Tallar la ceba a daus i sofregir en una paella amb oli. Quan comenci a estar daurada afegir l’all picat i donar unes voltes.",
@@ -2602,8 +2892,11 @@
             "Tallar el tofu a filets. Passar per la planxa amb dues gotes d’oli (o sense).",
             "Quan el curri estigui fet, passar per la batedora (o no, al gust de cadascú)."
         ],
-        "notes": [
+        "presentation": [
             "Servir en un bol l’arròs amb el curri i els filets de tofu damunt."
+        ],
+        "notes": [
+            "El tofu es pot fer arrebossat també."
         ],
         "categories": [
             "Cuina Asiàtica",
@@ -2623,6 +2916,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/melmelada-610x347.jpg",
+        "blockquote": [
+            "Unes postres delicioses que també es poden menjar per esmorzar o berenar"
+        ],
         "title": "Plàtan amb melmelada de maduixa",
         "people": "per a 2 persones",
         "ingredients": [
@@ -2631,7 +2928,9 @@
             "2 cullerades de sucre",
             "aigua"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "En una olla posar un parell de gots d’aigua a bullir.",
             "Mentres, triturar les maduixes.",
@@ -2658,6 +2957,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/espinacs-amb-cigrons-i-seitan-610x347.jpg",
         "title": "Espinacs amb cigrons i seitan",
         "people": "per a 2-3 persones",
         "ingredients": [
@@ -2666,7 +2966,9 @@
             "200g de seitan",
             "2 dents d’all"
         ],
-        "time": "15 min",
+        "time": [
+            "15 min"
+        ],
         "preparation": [
             "Rentar i bullir els espinacs durant 1 min. Escórrer i reservar.",
             "Si es fan servir cigrons crus, deixar en remull durant 12h, escórrer, netejar i bullir durant 1h (més o menys).",
@@ -2686,6 +2988,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/espaguetis-beixamel-espinacs-610x347.jpg",
         "title": "Espaguetis amb beixamel vegana d’espinacs",
         "people": "per a 2 persones",
         "ingredients": [
@@ -2696,7 +2999,9 @@
             "3 cullerades de margarina",
             "3 cullerades de farina de blat"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Rentar i bullir els espinacs en una olla amb aigua salada durant 5 min. Reservar 1/2 got de brou.",
             "Bullir els espaguetis 8-10 min.",
@@ -2722,6 +3027,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/crema-carbassa-610x347.jpg",
+        "blockquote": [
+            "Al bon temps, cremes fredes"
+        ],
         "title": "Crema de carbassa",
         "people": "per a 3-4 persones",
         "ingredients": [
@@ -2731,7 +3040,9 @@
             "1/2 got de llet de soia",
             "margarina"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Pelar la carbassa, les patates i la ceba i trossejar.",
             "Posar-ho en una olla amb una cullerada de margarina i sofregir durant 5 min.",
@@ -2758,6 +3069,12 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/gelatina_fruites-610x347.jpg",
+        "blockquote": [
+            "Aquesta gelatina està feta a base d’agar-agar, que surt a partir de fer bullir i filtrar 8 tipus diferents d’algues vermelles i gelifica en calent.",
+            "Es pot trobar en forma de tires o en pols (aquí fem servir aquesta última).",
+            "Per a aconseguir una gelatina rígida, les proporcions són 16 g per cada litre d’aigua, i per a una gelatina tova, 6g per litre."
+        ],
         "title": "Gelatina de fruites d’agar-agar",
         "people": "per a 6 persones",
         "ingredients": [
@@ -2769,7 +3086,9 @@
             "1 mandarina",
             "2 cullerades de sucre"
         ],
-        "time": "5 min (+ 1h)",
+        "time": [
+            "5 min (+ 1h)"
+        ],
         "preparation": [
             "Tallar les fruites a daus petits.",
             "Posar en un motllo, repartint bé fins a cobrir completament (jo he utilitzat un motllo de magdalenes de silicona perquè quedessin 6 gelatines petites).",
@@ -2797,19 +3116,34 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/seitan-salsa-poma-610x347.jpg",
         "title": "Seitan arrebossat amb salsa de poma",
-        "people": "En la cuina tradicional, per arrebossar, s’utilitza ou.\nEn aquesta entrada us donaré un petit truc per a arrebossar sense ou.",
+        "people": "per a 2 persones",
         "ingredients": [
             "1 cullerada de farina de blat (o farina de cigró)",
-            "2 cullerades d’aigua freda"
+            "2 cullerades d’aigua freda",
+            "1 bola de seitan (250-300g)",
+            "farina de blat (o farina de cigró)",
+            "aigua",
+            "pa ratllat",
+            "2 pomes",
+            "suc de llimona",
+            "canyella (opcional)"
         ],
-        "time": "1 bola de seitan (250-300g)farina de blat (o farina de cigró)aiguapa ratllat2 pomessuc de llimonacanyella (opcional)",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
-            "Barrejar la farina i l’aigua en les mesures indicades.",
-            "Passar la verdura, tofu, seitan (el que sigui) per la barreja i arrebossar amb pa ratllat."
+            "Tallar el seitan a filets.",
+            "En un plat fons, barrejar la farina amb l’aigua. En un altre plat posar pa ratllat amb una mica de sal i pebre (o julivert, all en pols…).",
+            "Passar el seitan per la barreja i arrebossar amb el pa rallat.",
+            "Calentar oli en una paella i fregir el seitan arrebossat. Reservar en un plat amb paper absorvent.",
+            "Pelar i netejar les pomes. Tallar a daus petits i posar en una olla amb un got d’aigua a foc lent/mig (si s’acaba l’aigua, afegir un altre got).",
+            "Afegir un rajolí de suc de llimona.",
+            "Anar removent fins que les pomes es desfacin."
         ],
         "notes": [
-            "30 min"
+            "A la salsa de poma se li pot afegir una culleradeta de canyella."
         ],
         "categories": [
             "Cuina Tradicional",
@@ -2827,6 +3161,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/arros-cubana-610x347.jpg",
         "title": "Arròs a la cubana",
         "people": "per a 2 persones",
         "ingredients": [
@@ -2835,7 +3170,9 @@
             "3-4 tomàquets",
             "1 plàtan"
         ],
-        "time": "20 min",
+        "time": [
+            "20 min"
+        ],
         "preparation": [
             "Bullir l’arròs 18-20 min.",
             "Ratllar els tomàquets. Reservar en un bol.",
@@ -2856,13 +3193,21 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/coliflor-patata-gratinada-610x347.jpg",
         "title": "Coliflor i patata amb beixamel vegana gratinada",
         "people": "per a 2 persones",
         "ingredients": [
             "1 coliflor",
-            "3 patates"
+            "3 patates",
+            "1/2 ceba",
+            "2 cullerades de farina de blat",
+            "2 cullerades de margarina",
+            "2 gots de llet de soia",
+            "nou moscada (opcional)"
         ],
-        "time": "1/2 ceba2 cullerades de farina de blat2 cullerades de margarina2 gots de llet de soianou moscada (opcional)",
+        "time": [
+            "45 min"
+        ],
         "preparation": [
             "Precalentar el forn a 180ºC.",
             "Triar la coliflor i posar a bullir 20 min.",
@@ -2873,7 +3218,8 @@
             "Posar al forn a gratinar entre 20-30 min."
         ],
         "notes": [
-            "45 min"
+            "Vigilar la sal amb la beixamel perquè tant la llet de soja com la ceba són “dolces”.",
+            "La nou moscada ajuda a corretgir la “dolçor” també."
         ],
         "categories": [
             "Cuina Tradicional",
@@ -2891,6 +3237,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/07/alberginies-farcides-610x347.jpg",
+        "blockquote": [
+            "Les albergínies farcides és una recepta molt fàcil i molt adequada quan hi ha poca cosa a la nevera.\nS’hi poden posar totes els ingredients que es vulgui  – ceba, carbassó, bolets, espinacs, etc. – tot ben acompanyat amb una bona salsa de tomàquet natural o una beixamel vegana.\nEn el meu cas, només tenia ceba, xampinyons, all i tomàquet…\n"
+        ],
         "title": "Albergínies farcides",
         "people": "per a 2 persones",
         "ingredients": [
@@ -2901,7 +3251,9 @@
             "2-3 tomàquets",
             "i tots els ingredients que es tingui"
         ],
-        "time": "45 min",
+        "time": [
+            "45 min"
+        ],
         "preparation": [
             "Posar les albergínies al forn a 180ºC durant 30 min. Donar la volta quan portin 15 min.",
             "Rentar els tomàquets, ratllar i reservar.",
@@ -2930,6 +3282,7 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/06/hamburgueses-pastanaga-610x347.jpg",
         "title": "Hamburgueses de pastanaga i patata",
         "people": "per a 3-4 persones",
         "ingredients": [
@@ -2939,7 +3292,9 @@
             "3-4 pastanagues",
             "pa ratllat"
         ],
-        "time": "1:15 h",
+        "time": [
+            "1:15 h"
+        ],
         "preparation": [
             "Posar aigua a bullir per cobrir la soia texturitzada.",
             "Deixar reposar la soia dins de l’aigua bullida durant 30 min.",
@@ -2968,6 +3323,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/06/entrepa_alvocat_tomaquet-610x347.jpg",
+        "blockquote": [
+            "D’això en dic jo un esmorzar de campions! Comences el dia amb una energia…  "
+        ],
         "title": "Entrepà d’alvocat i tomàquet",
         "people": "per a 2 persones",
         "ingredients": [
@@ -2978,7 +3337,9 @@
             "oli d’oliva",
             "sal i pebre"
         ],
-        "time": "5 min",
+        "time": [
+            "5 min"
+        ],
         "preparation": [
             "Tallar l’alvocat en dos i buidar amb una cullera. Aixafar i estendre pel pa.",
             "Tallar el tomàquet a rodanxes fines i posar a sobre. Afegir unes tàperes.",
@@ -3003,6 +3364,11 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/06/cassoleta-de-tempeh-610x347.jpg",
+        "blockquote": [
+            "El tempeh és una de les proteïnes vegetals procedents de la soja, com el tofu. A diferència d’aquest, el tempeh està fet a partir de la fermentació de la soja, i és per això que té una textura més densa i un gust més fort.",
+            "Es pot trobar cru o macerat (aquest segon es pot prendre directament de l’envàs, sense cuinar). Es presenta en forma de barres."
+        ],
         "title": "Cassoleta de tempeh",
         "people": "per a 2 persones",
         "ingredients": [
@@ -3013,9 +3379,15 @@
             "1 pastanaga",
             "1 albergínia",
             "1 tomàquet",
-            "2-3 fulles de llorer"
+            "2-3 fulles de llorer",
+            "20-25 ametlles",
+            "1-2 dents d’all",
+            "sal i pebre",
+            "julivert"
         ],
-        "time": "20-25 ametlles1-2 dents d’allsal i pebrejulivert",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Tallar les verdures i el tomàquet a daus petits i sofregir en una paella amb oli durant 5 min a foc lent.",
             "Mentres, fer la picada en un morter amb les ametlles, l’all, el julivert, la sal i el pebre.",
@@ -3023,7 +3395,7 @@
             "Acabar de donar unes voltes, afegir aigua fins a cobrir i deixar fer “xup, xup” a foc lent durant uns 15 min."
         ],
         "notes": [
-            "30 min"
+            "Deixar una mica de salsa per sucar-hi pa  "
         ],
         "categories": [
             "Cuina Tradicional",
@@ -3045,6 +3417,10 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2012/11/taronges-farcides-610x347.jpg",
+        "blockquote": [
+            "Unes postres molt fàcils de fer i molt vistoses."
+        ],
         "title": "Taronges farcides",
         "people": "per a 3-4 persones",
         "ingredients": [
@@ -3054,7 +3430,9 @@
             "canyella en pols (opcional)",
             "menta fresca (opcional)"
         ],
-        "time": "15 min (+ 1h)",
+        "time": [
+            "15 min (+ 1h)"
+        ],
         "preparation": [
             "Exprimir el suc de les taronges. Reservar el suc d’una taronja per a dissoldre la farina de blat de moro i reservar les mitges taronges buides.",
             "En una olla escalfar la resta del suc, afegir el sucre i remenar.",
@@ -3063,8 +3441,11 @@
             "Abocar el suc a les mitges taronges buides.",
             "Posar a la nevera durant mínim 1h."
         ],
-        "notes": [
+        "presentation": [
             "Escampar una mica de canyella i posar una fulla de menta fresca per damunt."
+        ],
+        "notes": [
+            "La farina de blat de moro fa que el suc de taronja quedi espès/gelatinós."
         ],
         "categories": [
             "Cuina Tradicional",
@@ -3080,6 +3461,11 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/08/paella-vegana-610x347.jpg",
+        "blockquote": [
+            "Recepta de la iaia.",
+            "Paella de verdures a l’estil tradicional."
+        ],
         "title": "Paella vegana",
         "people": "per a 4 persones",
         "ingredients": [
@@ -3096,7 +3482,9 @@
             "1 albergínia",
             "250-300g de mongeta tendra"
         ],
-        "time": "1h",
+        "time": [
+            "1h"
+        ],
         "preparation": [
             "Sofregir la coliflor en una paella amb oli. Reservar.",
             "En un morter fer una picada amb l’all, el julivert, el pebre vermell dolç i el safrà (es pot posar una mica de sal per que no saltin els alls al picar-los).",
@@ -3128,6 +3516,12 @@
         ]
     },
     {
+        "image": "http://www.hiulitscuisine.com/wp-content/uploads/2011/06/fricando_de_seitan-610x347.jpg",
+        "blockquote": [
+            "El seitan és una massa de gluten de blat barrejada amb aigua que es bull en un brou de salsa de soja i algues kombu (el gingebre tambés és molt utilitzat) per tal d’enriquir-lo.",
+            "També se l’anomena “carn vegetal” degut a la seva textura i consistència.  Es pot utilitzar per a fer hamburgueses, mandonguilles, filets, etc.",
+            "Té un gran contingut proteic i és molt digestiu."
+        ],
         "title": "Fricandó de seitan",
         "people": "per a 2 persones",
         "ingredients": [
@@ -3137,7 +3531,9 @@
             "250g de bolets",
             "farina de blat"
         ],
-        "time": "30 min",
+        "time": [
+            "30 min"
+        ],
         "preparation": [
             "Tallar el seitan a rodanxes fines. Salar, enfarinar i fregir en una paella o cassola amb oli. Reservar.",
             "Ratllar la ceba i sofregir a la mateixa paella o cassola. A mitja cocció afegir els bolets (en aquest cas, xampinyons).",

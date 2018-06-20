@@ -60,11 +60,21 @@ function getRecipe(url) {
             }
 
             function getIngredients() {
+                let ingredientsList = []
                 let ingredients = []
                 $('.posts > .postconts').children('h3').each(function(i, elem) {
-                    if ($(this).text() === 'Ingredients:' || $(this).text() === 'Ingredients') {
-                        $(this).siblings('ul').first().children('li').each(function(i, elem) {
-                            ingredients[i] = $(this).text()
+                    if ($(this).text() === 'Temps de preparació:' || $(this).text() === 'Temps de preparació') {
+
+                        $(this).prevAll('ul').each(function(i, elem) {
+                            ingredientsList.push($(this))
+                        })
+
+                        ingredientsList.reverse()
+                        
+                        $(ingredientsList).each(function(i, elem) {
+                            $(this).children('li').each(function(i, elem) {
+                                ingredients.push($(this).text())
+                            })
                         })
                     }
                 })

@@ -38,7 +38,7 @@ function getRecipe(url) {
             }
         }
         request(options, function(err, response, body) {
-            console.log('> Getting ' + url + ' recipe ...')
+            console.log('> Getting ' + url)
             if(err) reject(err)
             if(response.statusCode !== 200) {
                 console.log('ERROR:', url, response.statusCode)

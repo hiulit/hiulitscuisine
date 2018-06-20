@@ -47,6 +47,31 @@ function getRecipe(url) {
 
             let $ = cheerio.load(body)
 
+            function getImage() {
+                let image
+                image = $('.postthumb img').attr('src')
+                if (image) {
+                    return image
+                }
+            }
+
+            function getBlockquote() {
+                let blockquote = []
+                $('.posts > .postconts').children('blockquote').contents().each(function(i, elem) {
+                    if ($(this).is('p')) {
+                        blockquote.push($(this).text())
+                    }
+                    if ($(this).is('ul')) {
+                        $(this).children('li').each(function(i, elem) {
+                            blockquote.push($(this).text())
+                        })
+                    }
+                })
+                if (blockquote.length) {
+                    return blockquote
+                }
+            }
+
             function getPeople() {
                 let people
                 $('.posts > .postconts').children('h3').each(function(i, elem) {
@@ -161,6 +186,8 @@ function getRecipe(url) {
             }
 
             let recipe = {
+                'image': getImage(),
+                'blockquote': getBlockquote(),
                 'title': $('.posts > .post_title').children('h2').text(),
                 'people':  getPeople(),
                 'ingredients': getIngredients(),
@@ -205,7 +232,7 @@ function getAllRecipes(url) {
             Promise.all(promises)
                 .then(function(response){
                     console.log('> Received ' + response.length + ' recipes.')
-                    createJSON(response, 'receptes 2')
+                    createJSON(response, 'receptes')
                 })
         })
 }

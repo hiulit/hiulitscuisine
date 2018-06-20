@@ -88,7 +88,7 @@ function getRecipe(url) {
                 $('.posts > .postconts').children('h3').each(function(i, elem) {
                     if ($(this).text() === 'Temps de preparació:' || $(this).text() === 'Temps de preparació') {
                         $(this).next('ul').children('li').each(function(i, elem) {
-                            time[i] = $(this).text()
+                            time.push($(this).text())
                         })
                     }
                 })
@@ -102,7 +102,7 @@ function getRecipe(url) {
                 $('.posts > .postconts').children('h3').each(function(i, elem) {
                     if ($(this).text() === 'Preparació:' || $(this).text() === 'Preparació') {
                         $(this).next('ol').children('li').each(function(i, elem) {
-                            preparation[i] = $(this).text()
+                            preparation.push($(this).text())
                         })
                     }
 
@@ -117,7 +117,7 @@ function getRecipe(url) {
                 $('.posts > .postconts').children('h3').each(function(i, elem) {
                     if ($(this).text() === 'Presentació:' || $(this).text() === 'Presentació') {
                         $(this).next('ul').children('li').each(function(i, elem) {
-                            presentation[i] = $(this).text()
+                            presentation.push($(this).text())
                         })
                     }
                 })
@@ -131,7 +131,7 @@ function getRecipe(url) {
                 $('.posts > .postconts').children('h4').each(function(i, elem) {
                     if ($(this).text() === 'Nota:'  || $(this).text() === 'Nota' || $(this).text() === 'Notes:' || $(this).text() === 'Notes') {
                         $(this).next('ul').children('li').each(function(i, elem) {
-                            notes[i] = $(this).text()
+                            notes.push($(this).text())
                         })
                     }
                 })            
@@ -143,7 +143,7 @@ function getRecipe(url) {
             function getCategories() {
                 let categories = []
                 $('.postmetass > .postmetas4').children('a').each(function(i, elem) {
-                    categories[i] = $(this).text()
+                    categories.push($(this).text())
                 })
                 if (categories.length) {
                     return categories
@@ -153,7 +153,7 @@ function getRecipe(url) {
             function getTags() {
                 let tags = []
                 $('.postmetass > .postmetas5').children('a').each(function(i, elem) {
-                    tags[i] = $(this).text()
+                    tags.push($(this).text())
                 })
                 if (tags.length) {
                     return tags

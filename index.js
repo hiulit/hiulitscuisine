@@ -13,9 +13,9 @@ function getURLs(url) {
     return new Promise(function(resolve, reject) {
         request(url, function(err, response, body) {
             if(err) reject(err)
-            // if(response.statusCode !== 200) {
-            //     reject('Invalid status code: '+response.statusCode)
-            // }
+            if(response.statusCode !== 200) {
+                reject('Invalid status code: '+response.statusCode)
+            }
             let $ = cheerio.load(body)
             let urls = []
 
@@ -42,7 +42,7 @@ function getRecipe(url) {
             if(err) reject(err)
             if(response.statusCode !== 200) {
                 console.log('ERROR:', url, response.statusCode)
-                // reject('Invalid status code: '+response.statusCode)
+                reject('ERROR:', url, response.statusCode)
             }
 
             let $ = cheerio.load(body)

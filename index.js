@@ -8,6 +8,20 @@ var https = require('https');
 http.globalAgent.maxSockets = 20;
 https.globalAgent.maxSockets = 20;
 
+function sortByKey(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key]
+        var y = b[key]
+        if (typeof x == "string") {
+            x = (""+x).toLowerCase()
+        }
+        if (typeof y == "string") {
+            y = (""+y).toLowerCase()
+        }
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0))
+    })
+}
+
 function getURLs(url) {
     console.log('> Getting URLs ...')
     return new Promise(function(resolve, reject) {
@@ -213,7 +227,7 @@ function createJSON(data, name) {
         name.toString()
     }
 
-    let dir = '/src/data/'
+    let dir = '/src/data/includes/'
 
     fs.writeFile(path.join(__dirname, dir + name + '.json'), JSON.stringify(data, null, 4), (err) => {
         if (err) {
@@ -229,16 +243,55 @@ function getAllRecipes(url) {
     getURLs(url)
         .then(function(urls) {
             let promises = []
-            for(let i=0; i<urls.length; i++) {
+            for(let i = 0; i < urls.length; i++) {
                 promises.push(getRecipe(urls[i]))
             }
             Promise.all(promises)
                 .then(function(response){
                     console.log('> Received ' + response.length + ' recipes.')
-                    let recipes = {
-                        'recipes': response
+                    let recipes = sortByKey(response, 'title')
+
+                    createJSON(recipes, 'recipes')
+
+                    let categories = []
+                    let categoriesArray = []
+                    for(let i = 0; i < response.length; i++) {
+                        for(let j = 0; j < response[i].categories.length; j++) {
+                            if (!categoriesArray.includes(response[i].categories[j])) {
+                                categoriesArray.push(response[i].categories[j])
+                                categories.push({
+                                    id: response[i].categories[j],
+                                    recipes: []
+                                })
+                            }
+                            for (let k = 0; k < categories.length; k++) {
+                                if (categories[k].id === response[i].categories[j]) {
+                                    categories[k].recipes.push(response[i])
+                                }
+                            }
+                        }
                     }
-                    createJSON(recipes, 'receptes')
+                    createJSON(categories, 'categories')
+
+                    let tags = []
+                    let tagsArray = []
+                    for(let i = 0; i < response.length; i++) {
+                        for(let j = 0; j < response[i].tags.length; j++) {
+                            if (!tagsArray.includes(response[i].tags[j])) {
+                                tagsArray.push(response[i].tags[j])
+                                tags.push({
+                                    id: response[i].tags[j],
+                                    recipes: []
+                                })
+                            }
+                            for (let k = 0; k < tags.length; k++) {
+                                if (tags[k].id === response[i].tags[j]) {
+                                    tags[k].recipes.push(response[i])
+                                }
+                            }
+                        }
+                    }
+                    createJSON(tags, 'tags')
                 })
         })
 }

@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     basePath: '<%= config.src %>/',
-                    content: '<%= config.src %>/data/receptes.json',
+                    content: '<%= config.tmp %>/data/final.json',
                     transforms: {
                         join: function(str, joinValue) {
                             return str.join(joinValue);
@@ -123,6 +123,16 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        json_bake: {
+            dist: {
+                options: {
+                    stripComments: true
+                },
+                files: {
+                        '<%= config.tmp %>/data/final.json': '<%= config.src %>/data/base.json'
+                }
+            }
+        },
         stylus: {
             compile: {
                 options: {
@@ -143,13 +153,13 @@ module.exports = function(grunt) {
                 sourcesContent: true,
                 processors: [
                     // require('postcssfixer')({browsers: 'last 2 versions'}) // add vendor prefixes
-                    require("autoprefixer")({
-                        browsers: ["> 0%", "ie 8-10", "Android >= 2.3"]
+                    require('autoprefixer')({
+                        browsers: ['> 0%', 'ie 8-10', 'Android >= 2.3']
                     }) // add vendor prefixes
                 ]
             },
             dist: {
-                src: "<%= config.tmp %>/styles/main.css"
+                src: '<%= config.tmp %>/styles/main.css'
             }
         },
         prompt: {
@@ -187,6 +197,7 @@ module.exports = function(grunt) {
                     '<%= config.src %>/data/{,*/,**/}*.json'
                 ],
                 tasks: [
+                    'json_bake',
                     'bake'
                 ]
             },
@@ -227,6 +238,7 @@ module.exports = function(grunt) {
             'clean',
             'stylus:compile',
             'postcss',
+            'json_bake',
             'bake',
             'copy',
             'connect:livereload',

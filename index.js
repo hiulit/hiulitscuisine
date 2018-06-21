@@ -77,6 +77,7 @@ function getRecipe(url) {
                 $('.posts > .postconts').children('h3').each(function(i, elem) {
                     if ($(this).text() === 'Ingredients:' || $(this).text() === 'Ingredients') {
                         people = $(this).next('p').text().replace(/\(|\)/g, '')
+                        people = people.replace(/per a/, '')
                     }
                 })
                 if (people) {
@@ -95,7 +96,7 @@ function getRecipe(url) {
                         })
 
                         ingredientsList.reverse()
-                        
+
                         $(ingredientsList).each(function(i, elem) {
                             $(this).children('li').each(function(i, elem) {
                                 ingredients.push($(this).text())
@@ -159,7 +160,7 @@ function getRecipe(url) {
                             notes.push($(this).text())
                         })
                     }
-                })            
+                })
                 if (notes.length) {
                     return notes
                 }
@@ -200,7 +201,7 @@ function getRecipe(url) {
                 'tags': getTags()
             }
 
-            resolve(recipe)  
+            resolve(recipe)
         })
     })
 }
@@ -212,12 +213,14 @@ function createJSON(data, name) {
         name.toString()
     }
 
-    fs.writeFile(path.join(__dirname, '/' + name + '.json'), JSON.stringify(data, null, 4), (err) => {
+    let dir = '/src/data/'
+
+    fs.writeFile(path.join(__dirname, dir + name + '.json'), JSON.stringify(data, null, 4), (err) => {
         if (err) {
             console.error(err)
             return
         }
-        console.log('> "' + name + '.json" has been created successfully!')
+        console.log('> "'+ dir + name + '.json" has been created successfully!')
     })
 }
 
@@ -232,7 +235,10 @@ function getAllRecipes(url) {
             Promise.all(promises)
                 .then(function(response){
                     console.log('> Received ' + response.length + ' recipes.')
-                    createJSON(response, 'receptes')
+                    let recipes = {
+                        'recipes': response
+                    }
+                    createJSON(recipes, 'receptes')
                 })
         })
 }

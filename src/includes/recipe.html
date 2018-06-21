@@ -5,6 +5,9 @@
 </head>
 <body>
     <h1>{{recipe.title}}</h1>
+    <!--(bake-start _if="recipe.blockquote")-->
+    <blockquote>{{recipe.blockquote}}</blockquote>
+    <!--(bake-end)-->
     <img src="{{recipe.image}}">
     <h2>Per a: {{recipe.people}}</h2>
     <h2>Ingredients:</h2>
@@ -25,6 +28,14 @@
         <li>{{preparation}}</li>
     <!--(bake-end)-->
     </ul>
+    <!--(bake-start _if="recipe.notes")-->
+    <h2>Notes:</h2>
+    <ul>
+    <!--(bake-start _foreach="note:recipe.notes")-->
+        <li>{{note}}</li>
+    <!--(bake-end)-->
+    </ul>
+    <!--(bake-end)-->
     <!--(bake-start _if="recipe.video")-->
     <h3>Vídeo</h3>
     <iframe src="{{recipe.video}}" width="640" height="360" frameborder="0" allowfullscreen></iframe>

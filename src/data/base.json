@@ -1,4 +1,5 @@
 {
+    "globalMetas": "{{includes/globalMetas.json}}",
     "recipes": "{{includes/recipes.json}}",
     "categories": "{{includes/categories.json}}",
     "tags": "{{includes/tags.json}}"

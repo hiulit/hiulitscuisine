@@ -201,6 +201,14 @@ module.exports = function(grunt) {
                     'bake'
                 ]
             },
+            scripts: {
+                files: [
+                    '<%= config.src %>/scripts/{,*/,**/}*.js'
+                ],
+                tasks: [
+                    'copy:scripts'
+                ]
+            },
             styles: {
                 files: [
                     '<%= config.src %>/styles/{,*/,**/}*.styl'

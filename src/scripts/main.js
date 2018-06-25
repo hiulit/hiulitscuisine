@@ -10,6 +10,28 @@ function arraysEqual(_arr1, _arr2) {
     return true
 }
 
+let ajax = new XMLHttpRequest()
+ajax.open("GET", "https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/tags.json", true)
+ajax.onload = function() {
+    let list = JSON.parse(ajax.responseText).map((item) => item.id)
+    new Awesomplete(document.querySelector("#search-input"),
+        {
+            list: list,
+            filter: function(text, input) {
+                return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0])
+            },
+            item: function(text, input) {
+                return Awesomplete.ITEM(text, input.match(/[^,]*$/)[0])
+            },
+            replace: function(text) {
+                let before = this.input.value.match(/^.+,\s*|/)[0]
+                this.input.value = before + text + ", "
+            }
+        }
+    )
+}
+ajax.send()
+
 
 $('#search-submit').click(function(e) {
     e.preventDefault()
@@ -18,7 +40,7 @@ $('#search-submit').click(function(e) {
     } else {
         let string = $('#search-input').val()
         let ingredients = string.split(',').map((item) => item.trim())
-        console.log(ingredients)
+        // console.log(ingredients)
         $.ajax({
             dataType: "json",
             url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/tags.json',

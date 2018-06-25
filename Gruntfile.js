@@ -121,6 +121,19 @@ module.exports = function(grunt) {
                         dest: '<%= config.dist %>/styles/'
                     }
                 ]
+            },
+            vendor_scripts: {
+                files: [
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: 'node_modules/',
+                        src: [
+                            'awesomplete/awesomplete.min.js'
+                        ],
+                        dest: '<%= config.dist %>/scripts/vendor/'
+                    }
+                ]
             }
         },
         json_bake: {

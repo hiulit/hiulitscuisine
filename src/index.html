@@ -10,6 +10,11 @@
 <body>
 <h1>{{globalMetas.title}}</h1>
 <h2>{{globalMetas.subtitle}}.</h2>
+<form>
+    <label for="search-input">Cerca per ingredients (separats per comes):</label>
+    <input id="search-input" type="text" placeholder="Introdueix ingredients...">
+    <input id="search-submit" type="submit" value="Cerca">
+</form>
 <h3>Receptes</h3>
 <ul>
 <!--(bake-start _foreach="recipe:recipes" _bake="/includes/recipe.html > receptes/{{recipe.title || slugify}}.html")-->

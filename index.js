@@ -249,10 +249,12 @@ function getAllRecipes(url) {
             Promise.all(promises)
                 .then(function(response){
                     console.log('> Received ' + response.length + ' recipes.')
-                    let recipes = sortByKey(response, 'title')
 
+                    // Recipes
+                    let recipes = sortByKey(response, 'title')
                     createJSON(recipes, 'recipes')
 
+                    // Categories
                     let categories = []
                     let categoriesArray = []
                     for(let i = 0; i < response.length; i++) {
@@ -271,8 +273,10 @@ function getAllRecipes(url) {
                             }
                         }
                     }
+                    categories = sortByKey(categories, 'id')
                     createJSON(categories, 'categories')
 
+                    // Tags
                     let tags = []
                     let tagsArray = []
                     for(let i = 0; i < response.length; i++) {
@@ -291,6 +295,7 @@ function getAllRecipes(url) {
                             }
                         }
                     }
+                    tags = sortByKey(tags, 'id')
                     createJSON(tags, 'tags')
                 })
         })

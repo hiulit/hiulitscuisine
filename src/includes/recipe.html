@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{recipe.title}} - hiulit's cuisine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{recipe.title}} | {{globalMetas.title}} - {{globalMetas.shortSubtitle}}</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
     <h1>{{recipe.title}}</h1>
@@ -43,14 +47,17 @@
     <h3>Categories:</h3>
     <ul>
     <!--(bake-start _foreach="category:recipe.categories")-->
-        <li>{{category}}</li>
+        <li>
+            <a href="/categories/{{category || slugify}}/">{{category}}</a>
+        </li>
     <!--(bake-end)-->
     </ul>
-    <h3>Etiquetes:</h3>
+    <h3>Ingredients:</h3>
     <ul>
     <!--(bake-start _foreach="tag:recipe.tags")-->
-        <li>{{tag}}</li>
+        <li>
+            <a href="/ingredients/{{tag || slugify}}/">{{tag}}</a>
+        </li>
     <!--(bake-end)-->
     </ul>
-</body>
-</html>
+<!--(bake /includes/footer.html)-->

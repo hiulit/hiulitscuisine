@@ -38,26 +38,56 @@ $('#search-submit').click(function(e) {
     if (!$('#search-input').val()) {
         console.log('empty')
     } else {
+        let strictMode = false
         let string = $('#search-input').val()
-        let ingredients = string.split(',').map((item) => item.trim())
-        // console.log(ingredients)
-        $.ajax({
-            dataType: "json",
-            url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/tags.json',
-            // data: data,
-            success: function(response) {
-                for (let i = 0; i < response.length; i++) {
-                    if (ingredients.includes(response[i].id)) {
-                        console.log(response[i].id)
-                        for (let j = 0; j < response[i].recipes.length; j++) {
-                            console.log(response[i].recipes[j])
+        let ingredients = string.split(',').map((item) => item.trim()).filter((item) => item !== (undefined || null || ''))
+        $('#search-mode-fieldset').find('input[type="radio"]').each(function() {
+            if ($(this).is(':checked')) {
+                console.log($(this).attr('id'), 'checked')
+                if ($(this).attr('id') === 'strict-mode') {
+                    $.ajax({
+                        dataType: "json",
+                        url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/recipes.json',
+                        success: function(response) {
+                            let stricArray = []
+                            for (let i = 0; i < response.length; i++) {
+                                if (arraysEqual(ingredients, response[i].tags)) {
+                                    stricArray.push(response[i])
+                                }
+                            }
+                            if (stricArray.length) {
+                                console.log(stricArray)
+                            } else {
+                                console.log('No s\'ha trobat cap recepta que contingui exactament aquests ingredients.')
+                            }
+                        },
+                        error: function(err) {
+                            console.log(err)
                         }
-                    }
+                    })
+                    strictMode = true
                 }
-            },
-            error: function(err) {
-                console.log(err)
+                return
             }
         })
+        if (!strictMode) {
+            $.ajax({
+                dataType: "json",
+                url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/tags.json',
+                success: function(response) {
+                    for (let i = 0; i < response.length; i++) {
+                        if (ingredients.includes(response[i].id)) {
+                            console.log(response[i].id)
+                            for (let j = 0; j < response[i].recipes.length; j++) {
+                                console.log(response[i].recipes[j])
+                            }
+                        }
+                    }
+                },
+                error: function(err) {
+                    console.log(err)
+                }
+            })
+        }
     }
 })

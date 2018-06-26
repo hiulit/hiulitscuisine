@@ -10,9 +10,25 @@
 <body>
 <h1>{{globalMetas.title}}</h1>
 <h2>{{globalMetas.subtitle}}.</h2>
-<form>
-    <label for="search-input">Cerca per ingredients (separats per comes):</label>
-    <input id="search-input" type="text" placeholder="Introdueix ingredients...">
+<form id="search-form">
+    <fieldset id="search-mode-fieldset">
+        <legend>Selecciona un mode de cerca:</legend>
+        <div class="input-group">
+            <label for="inclusive-mode"><b>Inclusiu</b> (cerca receptes que continguin, entre d'altres, els ingredients introduïts)</label>
+            <input id="inclusive-mode" type="radio" name="search-mode" checked>
+        </div>
+        <div class="input-group">
+            <label for="strict-mode"><b>Estricte</b> (cerca receptes que continguin exactament els ingredients introduïts)</label>
+            <input id="strict-mode" type="radio" name="search-mode">
+        </div>
+    </fieldset>
+    <fieldset id="search-input-fieldset">
+        <legend>Cerca per ingredients (separats per comes):</legend>
+        <div class="input-group">
+            <label for="search-input">Introdueix ingredients:</label>
+            <input id="search-input" type="text">
+        </div>
+    </fieldset>
     <input id="search-submit" type="submit" value="Cerca">
 </form>
 <h3>Receptes</h3>

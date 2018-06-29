@@ -1,3 +1,20 @@
+function slugify(str) {
+    const a = 'àáäâèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ·/_,:;'
+    const b = 'aaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh------'
+    const p = new RegExp(a.split('').join('|'), 'g')
+
+    return str.toString().toLowerCase()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(p, c =>
+            b.charAt(a.indexOf(c)))     // Replace special chars
+        .replace(/&/g, '-and-')         // Replace & with 'and'
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+        .replace(/^-+/, '')             // Trim - from start of text
+        .replace(/-+$/, '')             // Trim - from end of text
+}
+
+
 function arraysEqual(_arr1, _arr2) {
     if (!Array.isArray(_arr1) || !Array.isArray(_arr2) || _arr1.length !== _arr2.length) {
       return false
@@ -84,51 +101,69 @@ function findDuplicateInArray(array) {
 // var duplicateItems = findDuplicateInArray(concatItems)
 // console.log(duplicateItems)
 
-let ingredients = ['arròs', 'ceba', 'plàtan', 'xufa']
+// let ingredients = ['arròs', 'ceba', 'plàtan', 'xufa']
 
-function compare(arr1, arr2) {
-    return Math.round((arr1.length / arr2.length) * 100)
+function compare(a, b) {
+    return Math.round((a.length / b.length) * 100)
 }
-// common = Tots els ingedients que coincideixen entre la recepta i la cerca.
-// outLeft = Tots les ingredients que falten.
-// outRight = Tots els ingredients que sobren.
-// outLeft + common = Tots els ingredients de la recepta.
-// ourRight + common = Tots els ingredients de la cerca.
-// compare1 = Percentage d'ingredients que són presents a la recepta (si hi ha 100%, tens tots els ingredients per a fer la recepta)
-// compare2 = Percentage d'ingredients que són presents a la cerca (si hi ha 100%, tens més ingredients, o no, dels que necessites per a fer la recepta)
-$.ajax({
-    dataType: "json",
-    url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/recipes.json',
-    success: function(recipes) {
-        let results = []
-        for (let recipe of recipes) {
-            let common = []
-            let outLeft = []
-            let outRight = []
-            for (let tag of recipe.tags) {
-                if (ingredients.indexOf(tag) >= 0) {
-                    common.push(tag)
-                } else {
-                    outLeft.push(tag)
-                }
-            }
-            for (let ingredient of ingredients) {
-                if (common.indexOf(ingredient) == -1) {
-                    outRight.push(ingredient)
-                }
-            }
-            let result = [outLeft, common, outRight, compare(common, recipe.tags), compare(common, ingredients)]
-            result.title = recipe.title
-            results.push(result)
 
-
+function search(ingredients) {
+    // common = Tots els ingedients que coincideixen entre la recepta i la cerca.
+    // outLeft = Tots les ingredients que falten.
+    // outRight = Tots els ingredients que sobren.
+    // outLeft + common = Tots els ingredients de la recepta.
+    // ourRight + common = Tots els ingredients de la cerca.
+    // compare1 = Percentage d'ingredients que són presents a la recepta (si hi ha 100%, tens tots els ingredients per a fer la recepta)
+    // compare2 = Percentage d'ingredients que són presents a la cerca (si hi ha 100%, tens més ingredients, o no, dels que necessites per a fer la recepta)
+    $.ajax({
+        dataType: "json",
+        url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/recipes.json',
+        success: function(recipes) {
+            let results = []
+            for (let recipe of recipes) {
+                let original = recipe.tags
+                original.title = 'recepta'
+                let common = []
+                common.title = 'coincideixen'
+                let outLeft = []
+                outLeft.title = 'falten'
+                let outRight = []
+                outRight.title = 'sobren'
+                for (let tag of recipe.tags) {
+                    if (ingredients.indexOf(tag) >= 0) {
+                        common.push(tag)
+                    } else {
+                        outLeft.push(tag)
+                    }
+                }
+                for (let ingredient of ingredients) {
+                    if (common.indexOf(ingredient) == -1) {
+                        outRight.push(ingredient)
+                    }
+                }
+                let result = [original, outLeft, common, outRight, compare(common, recipe.tags), compare(common, ingredients)]
+                result.title = recipe.title
+                results.push(result)
+            }
+            results = results
+                        .sort((a, b) => { return b[4] - a[4] })
+                        .filter((item) => { return item[4] && item[5] > 0 })
+            // console.log(results)
+            $('#search-results ul').html('')
+            for (let result of results) {
+                // console.log(result)
+                $('#search-results ul').append(
+                    '<li>' +
+                        '<a href="/receptes/' + slugify(result.title) + '.html">' + result.title + '</a>' + ' - ' + result[4] + '%' +
+                    '</li>'
+                )
+            }
+        },
+        error: function(err) {
+            console.log(err)
         }
-        console.log(results.sort((a, b) => { return b[3] - a[3]}))
-    },
-    error: function(err) {
-        console.log(err)
-    }
-})
+    })
+}
 
 
 
@@ -170,92 +205,93 @@ $('#search-submit').click(function(e) {
     if (!$('#search-input').val()) {
         console.log('empty')
     } else {
-        let strictMode = false
+        // let strictMode = false
         let string = $('#search-input').val()
         let ingredients = string.split(',').map((item) => item.trim()).filter((item) => item !== (undefined || null || ''))
-        $('#search-mode-fieldset').find('input[type="radio"]').each(function() {
-            if ($(this).is(':checked')) {
-                console.log($(this).attr('id'), 'checked')
-                if ($(this).attr('id') === 'strict-mode') {
-                    $.ajax({
-                        dataType: "json",
-                        url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/recipes.json',
-                        success: function(response) {
-                            let strictObject = {}
-                            let strictArray = []
-                            for (let i = 0; i < response.length; i++) {
-                                // if (arraysEqual(ingredients, response[i].tags)) {
-                                //     strictArray.push(response[i])
-                                // }
+        search(ingredients)
+        // $('#search-mode-fieldset').find('input[type="radio"]').each(function() {
+        //     if ($(this).is(':checked')) {
+        //         console.log($(this).attr('id'), 'checked')
+        //         if ($(this).attr('id') === 'strict-mode') {
+        //             $.ajax({
+        //                 dataType: "json",
+        //                 url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/recipes.json',
+        //                 success: function(response) {
+        //                     let strictObject = {}
+        //                     let strictArray = []
+        //                     for (let i = 0; i < response.length; i++) {
+        //                         // if (arraysEqual(ingredients, response[i].tags)) {
+        //                         //     strictArray.push(response[i])
+        //                         // }
 
-                                // if (arrayContainsArray(response[i].tags, ingredients)) {
-                                //     strictArray.push(response[i])
-                                // }
+        //                         // if (arrayContainsArray(response[i].tags, ingredients)) {
+        //                         //     strictArray.push(response[i])
+        //                         // }
 
-                                // if (arrayContainsArrayOrMore(response[i].tags, ingredients)) {
-                                //     strictArray.push(response[i])
-                                // }
-                                // if (arrayContainsAny(response[i].tags, ingredients)) {
-                                //     strictArray.push(response[i])
-                                // }
-                                for (var j = 0; j < ingredients.length; j++) {
-                                    let ingredient = ingredients[j]
-                                    let index = response[i].tags.indexOf(ingredient)
-                                    let title = response[i].title
-                                    strictObject[ingredient] = strictObject[ingredient] || []
-                                    if (index >= 0) {
-                                        strictObject[ingredient].push(title)
-                                    }
-                                }
-                            }
-                            console.log(strictObject)
-                            Object.keys(strictObject).map(function(key, index) {
-                                let value = strictObject[key];
-                                console.log(value);
-                                strictArray.push(value)
-                            })
-                            console.log(strictArray)
-                            let arrayCommon = arraysCommon(strictArray)
-                            if (arrayCommon.length) {
-                                console.log(arrayCommon)
-                            } else {
-                                console.log('No s\'ha trobat cap recepta que contingui exactament aquests (o més) ingredients.')
-                            }
-                        },
-                        error: function(err) {
-                            console.log(err)
-                        }
-                    })
-                    strictMode = true
-                }
-                return
-            }
-        })
-        if (!strictMode) {
-            $.ajax({
-                dataType: "json",
-                url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/tags.json',
-                success: function(response) {
-                    let inclusiveArray = []
-                    for (let i = 0; i < response.length; i++) {
-                        if (ingredients.includes(response[i].id)) {
-                            console.log(response[i].id)
-                            for (let j = 0; j < response[i].recipes.length; j++) {
-                                // console.log(response[i].recipes[j])
-                                inclusiveArray.push(response[i].recipes[j])
-                            }
-                        }
-                    }
-                    if (inclusiveArray.length) {
-                        console.log(inclusiveArray)
-                    } else {
-                        console.log('No s\'ha trobat cap recepta que contingui, entre d\'altres, aquests ingredients.')
-                    }
-                },
-                error: function(err) {
-                    console.log(err)
-                }
-            })
-        }
+        //                         // if (arrayContainsArrayOrMore(response[i].tags, ingredients)) {
+        //                         //     strictArray.push(response[i])
+        //                         // }
+        //                         // if (arrayContainsAny(response[i].tags, ingredients)) {
+        //                         //     strictArray.push(response[i])
+        //                         // }
+        //                         for (var j = 0; j < ingredients.length; j++) {
+        //                             let ingredient = ingredients[j]
+        //                             let index = response[i].tags.indexOf(ingredient)
+        //                             let title = response[i].title
+        //                             strictObject[ingredient] = strictObject[ingredient] || []
+        //                             if (index >= 0) {
+        //                                 strictObject[ingredient].push(title)
+        //                             }
+        //                         }
+        //                     }
+        //                     console.log(strictObject)
+        //                     Object.keys(strictObject).map(function(key, index) {
+        //                         let value = strictObject[key];
+        //                         console.log(value);
+        //                         strictArray.push(value)
+        //                     })
+        //                     console.log(strictArray)
+        //                     let arrayCommon = arraysCommon(strictArray)
+        //                     if (arrayCommon.length) {
+        //                         console.log(arrayCommon)
+        //                     } else {
+        //                         console.log('No s\'ha trobat cap recepta que contingui exactament aquests (o més) ingredients.')
+        //                     }
+        //                 },
+        //                 error: function(err) {
+        //                     console.log(err)
+        //                 }
+        //             })
+        //             strictMode = true
+        //         }
+        //         return
+        //     }
+        // })
+        // if (!strictMode) {
+        //     $.ajax({
+        //         dataType: "json",
+        //         url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/tags.json',
+        //         success: function(response) {
+        //             let inclusiveArray = []
+        //             for (let i = 0; i < response.length; i++) {
+        //                 if (ingredients.includes(response[i].id)) {
+        //                     console.log(response[i].id)
+        //                     for (let j = 0; j < response[i].recipes.length; j++) {
+        //                         // console.log(response[i].recipes[j])
+        //                         inclusiveArray.push(response[i].recipes[j])
+        //                     }
+        //                 }
+        //             }
+        //             if (inclusiveArray.length) {
+        //                 console.log(inclusiveArray)
+        //             } else {
+        //                 console.log('No s\'ha trobat cap recepta que contingui, entre d\'altres, aquests ingredients.')
+        //             }
+        //         },
+        //         error: function(err) {
+        //             console.log(err)
+        //         }
+        //     })
+        // }
     }
 })

@@ -14,95 +14,6 @@ function slugify(str) {
         .replace(/-+$/, '')             // Trim - from end of text
 }
 
-
-function arraysEqual(_arr1, _arr2) {
-    if (!Array.isArray(_arr1) || !Array.isArray(_arr2) || _arr1.length !== _arr2.length) {
-      return false
-    }
-    let arr1 = _arr1.concat().sort()
-    let arr2 = _arr2.concat().sort()
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr1[i] !== arr2[i]){
-            return false
-        }
-    }
-    return true
-}
-
-function arrayContainsArray(superset, subset) {
-    if (0 === subset.length) {
-        return false
-    }
-    return subset.every(function (value) {
-        // console.log(superset)
-        // console.log(superset.indexOf(value))
-        // console.log(value)
-        // lala[value] = lala[value] || []
-        // lala[value].push(superset.indexOf(value))
-        return (superset.indexOf(value) >= 0)
-    })
-}
-
-function arrayContainsArrayOrMore(superset, subset) {
-    let array = []
-    if (0 === subset.length) {
-        return false
-    }
-    for (let i = 0; i < subset.length; i++) {
-        console.log(superset.indexOf(subset[i]))
-        if(superset.includes(subset[i])) {
-            array.push(subset[i])
-        }
-    }
-    return array
-    if (array.length) {
-        return true
-    } else {
-        return false
-    }
-}
-
-function arrayContainsAny(source, target) {
-    let result = source.filter((item) => target.indexOf(item) > -1)
-    return (result.length > 0);
-}
-
-function arraysCommon(arrays) {
-    let result = arrays.shift().reduce(function(res, v) {
-        if (res.indexOf(v) === -1 && arrays.every(function(a) {
-            return a.indexOf(v) !== -1;
-        })) res.push(v);
-        return res;
-    }, []);
-    console.log(result)
-    return result
-}
-
-
-
-
-
-function concatArrays(arrays){
-  return [].concat.apply([], arrays)
-}
-
-function findDuplicateInArray(array) {
-    return array.filter((a, i, aa) => aa.indexOf(a) === i && aa.lastIndexOf(a) !== i)
-}
-
-// var arrays  = [
-//     ["Amanida d’arròs i algues amb veganesa", "Arròs a la cubana", "Arròs amb bolets", "Arròs de diumenge", "Arròs negre vegà (sense tinta de calamar) amb allioli", "Filets de tofu amb curri", "Makis d’alvocat i tomàquet", "Paella vegana"],
-//     ["Albergínies farcides", "Amanida d’arròs i algues amb veganesa", "Arròs a la cubana", "Arròs negre vegà (sense tinta de calamar) amb allioli", "Cassoleta de tempeh", "Coliflor i patata amb beixamel vegana gratinada", "Crema de carbassa", "Crema de carbassó", "Crema de pastanaga amb curri i llet de coco", "Croquetes d’espinacs i pinyons", "Cuscús de verdures i seitan", "Escalivada", "Espaguetis a la puttanesca", "Espaguetis amb beixamel vegana d’espinacs", "Estofat de llenties", "Filets de tofu amb curri", "Fricandó de seitan", "Gaspatxo", "Guacamole", "Hamburgueses de civada i bolets xiitake", "Hamburgueses de pastanaga i patata", "Mandonguilles de seitan", "Moniatos al forn amb anelles de ceba", "Pasta a la carbonara vegana", "Pasta amb salsa de tomàquet i pastanaga", "Seitan amb salsa d’ametlles", "Sopa de ceba", "Truita de patates vegana", "Vichyssoise (crema de porro)"],
-//     ["Arròs a la cubana", "Batut de fruites i espinacs", "Gelatina de fruites d’agar-agar", "Muffins de plàtan", "Plàtan amb melmelada de maduixa"],
-//     ["Orxata"]
-// ]
-
-// var concatItems = concatArrays(arrays)
-// var duplicateItems = findDuplicateInArray(concatItems)
-// console.log(duplicateItems)
-
-// let ingredients = ['arròs', 'ceba', 'plàtan', 'xufa']
-
 function compare(a, b) {
     return Math.round((a.length / b.length) * 100)
 }
@@ -119,7 +30,7 @@ function search(ingredients) {
         dataType: "json",
         url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/recipes.json',
         success: function(recipes) {
-            let results = []
+            let searchResults = []
             for (let recipe of recipes) {
                 let original = recipe.tags
                 original.title = 'recepta'
@@ -143,39 +54,44 @@ function search(ingredients) {
                 }
                 let result = [original, outLeft, common, outRight, compare(common, recipe.tags), compare(common, ingredients)]
                 result.title = recipe.title
-                results.push(result)
+                searchResults.push(result)
             }
-            results = results
+            searchResults = searchResults
                         .sort((a, b) => { return b[4] - a[4] })
                         .filter((item) => { return item[4] && item[5] > 0 })
-            // console.log(results)
-            $('#search-results ul').html('')
-            for (let result of results) {
-                // console.log(result)
-                $('#search-results ul').append(
-                    '<li>' +
-                        '<a href="/receptes/' + slugify(result.title) + '.html">' + result.title + '</a>' + ' - ' + result[4] + '%' +
-                    '</li>'
-                )
+
+            console.log(searchResults.length > 0)
+            console.log(ingredients)
+
+            let template
+
+            if (searchResults.length > 0) {
+                template = `
+                    <p class="search-results-title">Resultats de la cerca: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')}</p>
+                    <ul class="search-results-list">
+                    ${searchResults.map(result =>
+                        `<li class="search-results-item">
+                            <a href="/receptes/${slugify(result.title)}.html">${result.title}</a>
+                            ${result[1].length ? `<p><strong>Et falta</strong>: ${result[1].join(', ')}</p>` : ''}
+                            ${result[3].length ? `<p><strong>Et sobra</strong>: <span style="text-decoration: line-through;">${result[3].join(', ')}</span></p>` : ''}
+                        </li>`
+                    ).join('')}
+                    </ul>
+                `
+            } else {
+                template = `
+                    <p>No hi ha cap recepta amb aquests ingredients: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')}</p>
+                `
+                console.log()
             }
+
+            if (template) document.querySelector('.js-search-results').innerHTML = template
         },
         error: function(err) {
             console.log(err)
         }
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 let ajax = new XMLHttpRequest()
 ajax.open("GET", "https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/tags.json", true)
@@ -205,93 +121,8 @@ $('#search-submit').click(function(e) {
     if (!$('#search-input').val()) {
         console.log('empty')
     } else {
-        // let strictMode = false
         let string = $('#search-input').val()
         let ingredients = string.split(',').map((item) => item.trim()).filter((item) => item !== (undefined || null || ''))
         search(ingredients)
-        // $('#search-mode-fieldset').find('input[type="radio"]').each(function() {
-        //     if ($(this).is(':checked')) {
-        //         console.log($(this).attr('id'), 'checked')
-        //         if ($(this).attr('id') === 'strict-mode') {
-        //             $.ajax({
-        //                 dataType: "json",
-        //                 url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/recipes.json',
-        //                 success: function(response) {
-        //                     let strictObject = {}
-        //                     let strictArray = []
-        //                     for (let i = 0; i < response.length; i++) {
-        //                         // if (arraysEqual(ingredients, response[i].tags)) {
-        //                         //     strictArray.push(response[i])
-        //                         // }
-
-        //                         // if (arrayContainsArray(response[i].tags, ingredients)) {
-        //                         //     strictArray.push(response[i])
-        //                         // }
-
-        //                         // if (arrayContainsArrayOrMore(response[i].tags, ingredients)) {
-        //                         //     strictArray.push(response[i])
-        //                         // }
-        //                         // if (arrayContainsAny(response[i].tags, ingredients)) {
-        //                         //     strictArray.push(response[i])
-        //                         // }
-        //                         for (var j = 0; j < ingredients.length; j++) {
-        //                             let ingredient = ingredients[j]
-        //                             let index = response[i].tags.indexOf(ingredient)
-        //                             let title = response[i].title
-        //                             strictObject[ingredient] = strictObject[ingredient] || []
-        //                             if (index >= 0) {
-        //                                 strictObject[ingredient].push(title)
-        //                             }
-        //                         }
-        //                     }
-        //                     console.log(strictObject)
-        //                     Object.keys(strictObject).map(function(key, index) {
-        //                         let value = strictObject[key];
-        //                         console.log(value);
-        //                         strictArray.push(value)
-        //                     })
-        //                     console.log(strictArray)
-        //                     let arrayCommon = arraysCommon(strictArray)
-        //                     if (arrayCommon.length) {
-        //                         console.log(arrayCommon)
-        //                     } else {
-        //                         console.log('No s\'ha trobat cap recepta que contingui exactament aquests (o més) ingredients.')
-        //                     }
-        //                 },
-        //                 error: function(err) {
-        //                     console.log(err)
-        //                 }
-        //             })
-        //             strictMode = true
-        //         }
-        //         return
-        //     }
-        // })
-        // if (!strictMode) {
-        //     $.ajax({
-        //         dataType: "json",
-        //         url: 'https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/tags.json',
-        //         success: function(response) {
-        //             let inclusiveArray = []
-        //             for (let i = 0; i < response.length; i++) {
-        //                 if (ingredients.includes(response[i].id)) {
-        //                     console.log(response[i].id)
-        //                     for (let j = 0; j < response[i].recipes.length; j++) {
-        //                         // console.log(response[i].recipes[j])
-        //                         inclusiveArray.push(response[i].recipes[j])
-        //                     }
-        //                 }
-        //             }
-        //             if (inclusiveArray.length) {
-        //                 console.log(inclusiveArray)
-        //             } else {
-        //                 console.log('No s\'ha trobat cap recepta que contingui, entre d\'altres, aquests ingredients.')
-        //             }
-        //         },
-        //         error: function(err) {
-        //             console.log(err)
-        //         }
-        //     })
-        // }
     }
 })

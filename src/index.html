@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ca">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,54 +8,48 @@
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 <body>
-<h1>{{globalMetas.title}}</h1>
-<h2>{{globalMetas.subtitle}}.</h2>
-<form id="search-form">
-    <fieldset id="search-mode-fieldset">
-        <legend>Selecciona un mode de cerca:</legend>
-        <div class="input-group">
-            <label for="inclusive-mode"><b>Inclusiu</b> (cerca receptes que continguin, entre d'altres, els ingredients introduïts)</label>
-            <input id="inclusive-mode" type="radio" name="search-mode" checked>
-        </div>
-        <div class="input-group">
-            <label for="strict-mode"><b>Estricte</b> (cerca receptes que continguin exactament (o més) els ingredients introduïts)</label>
-            <input id="strict-mode" type="radio" name="search-mode">
-        </div>
-    </fieldset>
-    <fieldset id="search-input-fieldset">
-        <legend>Cerca per ingredients (separats per comes):</legend>
-        <div class="input-group">
-            <label for="search-input">Introdueix ingredients:</label>
-            <input id="search-input" type="text">
-        </div>
-    </fieldset>
-    <input id="search-submit" type="submit" value="Cerca">
-</form>
-<div id="search-results">
-    <ul></ul>
-</div>
-<h3>Receptes</h3>
-<ul>
-<!--(bake-start _foreach="recipe:recipes" _bake="/includes/recipe.html > receptes/{{recipe.title || slugify}}.html")-->
-    <li>
-        <a href="/{{@link}}">{{recipe.title}}</a>
-    </li>
-<!--(bake-end )-->
-</ul>
-<h3>Categories:</h3>
-<ul>
-<!--(bake-start _foreach="category:categories" _bake="/includes/category.html > categories/{{category.id || slugify}}/index.html")-->
-    <li>
-        <a href="/categories/{{category.id || slugify}}/">{{category.id}}</a>
-    </li>
-<!--(bake-end )-->
-</ul>
-<h3>Ingredients:</h3>
-<ul>
-<!--(bake-start _foreach="tag:tags" _bake="/includes/tag.html > ingredients/{{tag.id || slugify}}/index.html")-->
-    <li>
-        <a href="/ingredients/{{tag.id || slugify}}/">{{tag.id}}</a>
-    </li>
-<!--(bake-end )-->
-</ul>
+    <header>
+        <h1>{{globalMetas.title}} - {{globalMetas.subtitle}}.</h1>
+    </header>
+    <form id="search-form">
+        <fieldset>
+            <legend>Cerca per ingredients (separats per comes):</legend>
+            <div class="input-group">
+                <label for="search-input">Introdueix ingredients:</label>
+                <input id="search-input" type="text">
+                <input id="search-submit" type="submit" value="Cerca">
+            </div>
+        </fieldset>
+    </form>
+    <div class="js-search-results"></div>
+    <nav>
+        <h2>Receptes:</h2>
+        <ul>
+        <!--(bake-start _foreach="recipe:recipes" _bake="/includes/recipe.html > receptes/{{recipe.title || slugify}}.html")-->
+            <li>
+                <a href="/{{@link}}">{{recipe.title}}</a>
+            </li>
+        <!--(bake-end )-->
+        </ul>
+    </nav>
+    <nav>
+        <h2>Categories:</h2>
+        <ul>
+        <!--(bake-start _foreach="category:categories" _bake="/includes/category.html > categories/{{category.id || slugify}}/index.html")-->
+            <li>
+                <a href="/categories/{{category.id || slugify}}/">{{category.id}}</a>
+            </li>
+        <!--(bake-end )-->
+        </ul>
+    </nav>
+    <nav>
+        <h2>Ingredients:</h2>
+        <ul>
+        <!--(bake-start _foreach="tag:tags" _bake="/includes/tag.html > ingredients/{{tag.id || slugify}}/index.html")-->
+            <li>
+                <a href="/ingredients/{{tag.id || slugify}}/">{{tag.id}}</a>
+            </li>
+        <!--(bake-end )-->
+        </ul>
+    </nav>
 <!--(bake /includes/footer.html)-->

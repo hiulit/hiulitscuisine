@@ -8,14 +8,21 @@
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 <body>
-    <nav>
-        <h1>{{category.id}}</h1>
-        <ul>
-            <!--(bake-start _foreach="recipe:category.recipes")-->
-            <li>
-                <a href="/receptes/{{recipe.title || slugify}}.html">{{recipe.title}}</a>
-            </li>
-            <!--(bake-end)-->
-        </ul>
-    </nav>
+    <section>
+        <header>
+            <h1>
+                <a href="/">{{globalMetas.title}} - {{globalMetas.subtitle}}</a>
+            </h1>
+        </header>
+        <nav>
+            <h2>{{category.id}}</h2>
+            <ul>
+                <!--(bake-start _foreach="recipe:category.recipes")-->
+                <li>
+                    <a href="/receptes/{{recipe.title || slugify}}.html">{{recipe.title}}</a>
+                </li>
+                <!--(bake-end)-->
+            </ul>
+        </nav>
+    </section>
 <!--(bake /includes/footer.html)-->

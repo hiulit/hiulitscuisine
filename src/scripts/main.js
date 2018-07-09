@@ -64,15 +64,23 @@ function searchIngredients(ingredients) {
         let searchTemplate
         if (searchResults.length) {
             searchTemplate = `
-                <p class="search-results-title">Resultats de la cerca: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')}</p>
+                <p class="search-results-title">Resultats de la cerca: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')}.</p>
                 <ul class="search-results-list">
                 ${searchResults.map(result =>
-                    `<li class="search-results-item">
-                        <a href="/receptes/${slugify(result.title)}.html">${result.title}</a>
-                        ${result[2].length ? `<p><strong>Tens</strong>: ${result[2].join(', ')}. 😀</p>` : ''}
-                        ${result[1].length ? `<p><strong>Et falta</strong>: ${result[1].join(', ')}. 😞</p>` : ''}
-                        ${result[3].length ? `<p><strong>Et sobra</strong>: <span style="text-decoration: line-through;">${result[3].join(', ')}</span>. 👎</p>` : ''}
-                    </li>`
+                    `${result[4] === 100
+                        ?
+                            `<li class="search-results-item">
+                                <a href="/receptes/${slugify(result.title)}.html">${result.title}</a>
+                                <p>🎉 <strong>Tens tots els ingredients!</strong></p>
+                            </li>`
+                        :
+                            `<li class="search-results-item">
+                                <a href="/receptes/${slugify(result.title)}.html">${result.title}</a>
+                                ${result[2].length ? `<p>😀 <strong>Tens</strong>: ${result[2].join(', ')}.</p>` : ''}
+                                ${result[1].length ? `<p>😞 <strong>Et falta</strong>: ${result[1].join(', ')}.</p>` : ''}
+                                ${result[3].length ? `<p>👎 <strong>Et sobra</strong>: <span style="text-decoration: line-through;">${result[3].join(', ')}</span>.</p>` : ''}
+                            </li>`
+                    }`
                 ).join('')}
                 </ul>
             `
@@ -82,7 +90,6 @@ function searchIngredients(ingredients) {
             `
             console.log()
         }
-
         if (searchTemplate) document.querySelector('.js-search-results').innerHTML = searchTemplate
     }
     // ajax.onerror = function() {

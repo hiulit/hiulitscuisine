@@ -92,7 +92,7 @@ function searchIngredients(ingredients) {
         if (searchTemplate) document.querySelector('.js-search-results').innerHTML = searchTemplate
     }
     ajax.onerror = function(err) {
-        console.log('There was an error!' + err)
+        console.log('There was an error! ' + err)
     }
     ajax.send()
 }

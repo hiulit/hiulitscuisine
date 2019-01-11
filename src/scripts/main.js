@@ -88,13 +88,12 @@ function searchIngredients(ingredients) {
             searchTemplate = `
                 <p>No hi ha cap recepta amb aquests ingredients: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')}</p>
             `
-            console.log()
         }
         if (searchTemplate) document.querySelector('.js-search-results').innerHTML = searchTemplate
     }
-    // ajax.onerror = function() {
-    //     console.log('There was an error!')
-    // }
+    ajax.onerror = function(err) {
+        console.log('There was an error!' + err)
+    }
     ajax.send()
 }
 

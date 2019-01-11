@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,25 @@
     <title>{{category.id}} | {{globalMetas.title}} - {{globalMetas.sortSubtitle}}</title>
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
+
 <body>
-    <section>
-        <header>
-            <h1>
-                <a href="/">{{globalMetas.title}} - {{globalMetas.subtitle}}</a>
-            </h1>
-        </header>
-        <nav>
-            <h2>{{category.id}}</h2>
-            <ul>
-                <!--(bake-start _foreach="recipe:category.recipes")-->
-                <li>
-                    <a href="/receptes/{{recipe.title || slugify}}.html">{{recipe.title}}</a>
-                </li>
-                <!--(bake-end)-->
-            </ul>
-        </nav>
-    </section>
-<!--(bake /includes/footer.html)-->
+    <main role="main">
+        <section>
+            <header>
+                <h1>
+                    <a href="/">{{globalMetas.title}} - {{globalMetas.subtitle}}</a>
+                </h1>
+            </header>
+            <nav>
+                <h2>{{category.id}}</h2>
+                <ul>
+                    <!--(bake-start _foreach="recipe:category.recipes")-->
+                    <li>
+                        <a href="/receptes/{{recipe.title || slugify}}.html">{{recipe.title}}</a>
+                    </li>
+                    <!--(bake-end)-->
+                </ul>
+            </nav>
+        </section>
+    </main>
+    <!--(bake /includes/footer.html)-->

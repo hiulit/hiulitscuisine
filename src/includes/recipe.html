@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,81 +8,89 @@
     <title>{{recipe.title}} | {{globalMetas.title}} - {{globalMetas.shortSubtitle}}</title>
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
+
 <body>
-    <article>
-        <header>
-            <h1>
-                <a href="/">{{globalMetas.title}} - {{globalMetas.subtitle}}</a>
-            </h1>
-        </header>
+    <main role="main">
         <section>
-            <header>
-                <h2>{{recipe.title}}</h2>
-            </header>
-            <!--(bake-start _if="recipe.blockquote")-->
-            <!-- <blockquote>{{recipe.blockquote}}</blockquote> -->
-            <!--(bake-end)-->
-            <figure>
-                <img src="{{recipe.image}}" alt="{{recipe.title}}">
-            </figure>
-            <h3>Per a: {{recipe.people}}</h3>
-            <h3>Ingredients:</h3>
-            <ul>
-            <!--(bake-start _foreach="ingredient:recipe.ingredients")-->
-                <li>{{ingredient}}</li>
-            <!--(bake-end)-->
-            </ul>
-            <h3>Temps de preparació:</h3>
-            <ul>
-            <!--(bake-start _foreach="time:recipe.time")-->
-                <li>{{time}}</li>
-            <!--(bake-end)-->
-            </ul>
-            <h3>Preparació:</h3>
-            <ul>
-            <!--(bake-start _foreach="preparation:recipe.preparation")-->
-                <li>{{preparation}}</li>
-            <!--(bake-end)-->
-            </ul>
-            <!--(bake-start _if="recipe.notes")-->
-            <h3>Notes:</h3>
-            <ul>
-            <!--(bake-start _foreach="note:recipe.notes")-->
-                <li>{{note}}</li>
-            <!--(bake-end)-->
-            </ul>
-            <!--(bake-end)-->
-            <!--(bake-start _if="recipe.video")-->
-            <h3>Vídeo</h3>
-            <iframe src="{{recipe.video}}" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-            <!--(bake-end)-->
+            <article>
+                <header>
+                    <h1>
+                        <a href="/">{{globalMetas.title}} - {{globalMetas.subtitle}}</a>
+                    </h1>
+                </header>
+                <section>
+                    <header>
+                        <h2>{{recipe.title}}</h2>
+                    </header>
+                    <!--(bake-start _if="recipe.blockquote")-->
+                    <!-- <blockquote>{{recipe.blockquote}}</blockquote> -->
+                    <!--(bake-end)-->
+                    <figure>
+                        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                    </figure>
+                    <h3>Per a: {{recipe.people}}</h3>
+                    <h3>Ingredients:</h3>
+                    <ul>
+                        <!--(bake-start _foreach="ingredient:recipe.ingredients")-->
+                        <li>{{ingredient}}</li>
+                        <!--(bake-end)-->
+                    </ul>
+                    <h3>Temps de preparació:</h3>
+                    <ul>
+                        <!--(bake-start _foreach="time:recipe.time")-->
+                        <li>{{time}}</li>
+                        <!--(bake-end)-->
+                    </ul>
+                    <h3>Preparació:</h3>
+                    <ul>
+                        <!--(bake-start _foreach="preparation:recipe.preparation")-->
+                        <li>{{preparation}}</li>
+                        <!--(bake-end)-->
+                    </ul>
+                    <!--(bake-start _if="recipe.notes")-->
+                    <h3>Notes:</h3>
+                    <ul>
+                        <!--(bake-start _foreach="note:recipe.notes")-->
+                        <li>{{note}}</li>
+                        <!--(bake-end)-->
+                    </ul>
+                    <!--(bake-end)-->
+                    <!--(bake-start _if="recipe.video")-->
+                    <h3>Vídeo</h3>
+                    <iframe src="{{recipe.video}}" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+                    <!--(bake-end)-->
+                </section>
+                <aside role="complementary">
+                    <nav>
+                        <h3>Categories:</h3>
+                        <ul>
+                            <!--(bake-start _foreach="category:recipe.categories")-->
+                            <li>
+                                <a href="/categories/{{category || slugify}}/">{{category}}</a>
+                            </li>
+                            <!--(bake-end)-->
+                        </ul>
+                    </nav>
+                    <nav>
+                        <h3>Ingredients:</h3>
+                        <ul>
+                            <!--(bake-start _foreach="tag:recipe.tags")-->
+                            <li>
+                                <a href="/ingredients/{{tag || slugify}}/">{{tag}}</a>
+                            </li>
+                            <!--(bake-end)-->
+                        </ul>
+                    </nav>
+                </aside>
+                <footer>
+                    <p>
+                        <small>
+                            <a href="/receptes/{{recipe.title || slugify}}.html">{{recipe.title}}</a> és una recepta de
+                            <strong>{{globalMetas.title}} - {{globalMetas.shortSubtitle}}.</strong>
+                        </small>
+                    </p>
+                </footer>
+            </article>
         </section>
-        <footer>
-            <nav>
-                <h3>Categories:</h3>
-                <ul>
-                <!--(bake-start _foreach="category:recipe.categories")-->
-                    <li>
-                        <a href="/categories/{{category || slugify}}/">{{category}}</a>
-                    </li>
-                <!--(bake-end)-->
-                </ul>
-            </nav>
-            <nav>
-                <h3>Ingredients:</h3>
-                <ul>
-                <!--(bake-start _foreach="tag:recipe.tags")-->
-                    <li>
-                        <a href="/ingredients/{{tag || slugify}}/">{{tag}}</a>
-                    </li>
-                <!--(bake-end)-->
-                </ul>
-            </nav>
-            <p>
-                <small>
-                    <a href="/receptes/{{recipe.title || slugify}}.html">{{recipe.title}}</a> és una recepta de <strong>{{globalMetas.title}} - {{globalMetas.shortSubtitle}}.</strong>
-                </small>
-            </p>
-        </footer>
-    </article>
-<!--(bake /includes/footer.html)-->
+    </main>
+    <!--(bake /includes/footer.html)-->

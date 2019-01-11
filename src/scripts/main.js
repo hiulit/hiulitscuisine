@@ -120,14 +120,15 @@ if (document.querySelector("#search-input") !== null) {
     ajax.send()
 }
 
-
-document.querySelector('#search-submit').addEventListener('click', function(e) {
-    e.preventDefault()
-    if (!document.querySelector('#search-input').value) {
-        console.log('empty')
-    } else {
-        let string = document.querySelector('#search-input').value
-        let ingredients = string.split(',').map((item) => item.trim()).filter((item) => item !== (undefined || null || ''))
-        searchIngredients(ingredients)
-    }
-})
+if (document.querySelector("#search-input") !== null) {
+    document.querySelector('#search-submit').addEventListener('click', function(e) {
+        e.preventDefault()
+        if (!document.querySelector('#search-input').value) {
+            console.log('empty')
+        } else {
+            let string = document.querySelector('#search-input').value
+            let ingredients = string.split(',').map((item) => item.trim()).filter((item) => item !== (undefined || null || ''))
+            searchIngredients(ingredients)
+        }
+    })
+}

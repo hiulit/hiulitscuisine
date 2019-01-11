@@ -61,9 +61,9 @@ function searchIngredients(ingredients) {
                     .sort((a, b) => { return b[4] - a[4] })
                     .filter((item) => { return item[4] && item[5] > 0 })
 
-        let searchTemplate
+        let searchResultsTemplate
         if (searchResults.length) {
-            searchTemplate = `
+            searchResultsTemplate = `
                 <p class="search-results-title">Resultats de la cerca: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')}.</p>
                 <ul class="search-results-list">
                 ${searchResults.map(result =>
@@ -85,11 +85,11 @@ function searchIngredients(ingredients) {
                 </ul>
             `
         } else {
-            searchTemplate = `
+            searchResultsTemplate = `
                 <p>No hi ha cap recepta amb aquests ingredients: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')}</p>
             `
         }
-        if (searchTemplate) document.querySelector('.js-search-results').innerHTML = searchTemplate
+        if (searchResultsTemplate) document.querySelector('.js-search-results').innerHTML = searchResultsTemplate
     }
     ajax.onerror = function(err) {
         console.log('There was an error! ' + err)

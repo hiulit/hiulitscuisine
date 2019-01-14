@@ -3,10 +3,29 @@
         <fieldset>
             <legend>Cerca per ingredients (separats per comes):</legend>
             <div class="input-group">
-                <label for="search-input">Introdueix ingredients:</label>
-                <input id="search-input" type="text">
-                <input id="search-submit" type="submit" value="Cerca">
+                <label for="search-input-ingredients">Introdueix ingredients:</label>
+                <input id="search-input-ingredients" type="text">
             </div>
+            <div class="input-group">
+                <label for="search-select-categories">Selecciona una categoria</label>
+                <select name="" id="search-select-categories">
+                    <option value="Totes">Totes</option>
+                    <option value="Berenars">Berenars</option>
+                    <option value="Cuina Americana">Cuina Americana</option>
+                    <option value="Cuina Asiàtica">Cuina Asiàtica</option>
+                    <option value="Cuina Tradicional">Cuina Tradicional</option>
+                    <option value="Cuina Àrab / Nord-africana">Cuina Àrab / Nord-africana</option>
+                    <option value="Entrants">Entrants</option>
+                    <option value="Esmorzars">Esmorzars</option>
+                    <option value="Germinats">Germinats</option>
+                    <option value="Llets vegetals">Llets vegetals</option>
+                    <option value="Plats Principals">Plats Principals</option>
+                    <option value="Postres">Postres</option>
+                    <option value="Salses">Salses</option>
+                    <option value="Sopes i cremes">Sopes i cremes</option>
+                </select>
+            </div>
+            <input id="search-submit" type="submit" value="Cerca">
         </fieldset>
     </form>
     <div class="js-search-results"></div>

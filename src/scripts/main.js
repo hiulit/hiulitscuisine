@@ -54,14 +54,27 @@ function searchIngredients(ingredients) {
                 }
             }
             let result = [original, outLeft, common, outRight, compare(common, recipe.tags), compare(common, ingredients)]
+            result.categories = recipe.categories
             result.title = recipe.title
             searchResults.push(result)
         }
+
         searchResults = searchResults
-                    .sort((a, b) => { return b[4] - a[4] })
-                    .filter((item) => { return item[4] && item[5] > 0 })
+                                .sort((a, b) => { return b[4] - a[4] })
+                                .filter((item) => { return item[4] && item[5] > 0 })
+
+        let category = document.querySelector('#search-select-categories').selectedOptions[0].value
+
+        if (category != "Totes") {
+            searchResults = searchResults
+                                    .filter((item) => { return item.categories.includes(category) })
+        }
+
+        console.log(category)
+        console.log(searchResults)
 
         let searchResultsTemplate
+
         if (searchResults.length) {
             searchResultsTemplate = `
                 <p class="search-results-title">Resultats de la cerca: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')}.</p>
@@ -86,7 +99,7 @@ function searchIngredients(ingredients) {
             `
         } else {
             searchResultsTemplate = `
-                <p>No hi ha cap recepta amb aquests ingredients: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')}</p>
+                <p>No hi ha cap recepta amb aquests ingredients: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')} en la categoria <strong>${category}</strong>.</p>
             `
         }
         if (searchResultsTemplate) document.querySelector('.js-search-results').innerHTML = searchResultsTemplate
@@ -97,11 +110,11 @@ function searchIngredients(ingredients) {
     ajax.send()
 }
 
-if (document.querySelector("#search-input") !== null) {
+if (document.querySelector("#search-input-ingredients") !== null) {
     ajax.open("GET", "https://raw.githubusercontent.com/hiulit/hiulitscuisine/master/src/data/includes/tags.json", true)
     ajax.onload = function() {
         let list = JSON.parse(ajax.responseText).map((item) => item.id)
-        new Awesomplete(document.querySelector("#search-input"),
+        new Awesomplete(document.querySelector("#search-input-ingredients"),
             {
                 list: list,
                 filter: function(text, input) {
@@ -120,13 +133,19 @@ if (document.querySelector("#search-input") !== null) {
     ajax.send()
 }
 
-if (document.querySelector("#search-input") !== null) {
+if (document.querySelector("#search-input-ingredients") !== null) {
     document.querySelector('#search-submit').addEventListener('click', function(e) {
         e.preventDefault()
-        if (!document.querySelector('#search-input').value) {
+        if (!document.querySelector('#search-input-ingredients').value) {
             console.log('empty')
+            let searchResultsTemplate
+            searchResultsTemplate = `
+                <p style="color: red">Introdueix com a mínim 1 ingredient<p>
+            `
+            if (searchResultsTemplate) { document.querySelector('.js-search-results').innerHTML = searchResultsTemplate }
+            document.querySelector("#search-input-ingredients").focus()
         } else {
-            let string = document.querySelector('#search-input').value
+            let string = document.querySelector('#search-input-ingredients').value
             let ingredients = string.split(',').map((item) => item.trim()).filter((item) => item !== (undefined || null || ''))
             searchIngredients(ingredients)
         }

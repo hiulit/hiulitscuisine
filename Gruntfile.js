@@ -1,21 +1,21 @@
-'use strict';
+'use strict'
 
-var LIVERELOAD_PORT = 35730;
-var SERVER_PORT = 9001;
-var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
+var LIVERELOAD_PORT = 35730
+var SERVER_PORT = 9001
+var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT })
 var mountFolder = function (connect, dir) {
-    return connect.static(require('path').resolve(dir));
-};
+    return connect.static(require('path').resolve(dir))
+}
 
-module.exports = function(grunt) {
-    var target = grunt.option('target') || '';
+module.exports = function (grunt) {
+    var target = grunt.option('target') || ''
     var config = {
         src: 'src',
         dist: 'dist',
         tmp: '.tmp'
     }
 
-    require('load-grunt-tasks')(grunt);
+    require('load-grunt-tasks')(grunt)
 
     grunt.initConfig({
         config: config,
@@ -25,48 +25,49 @@ module.exports = function(grunt) {
                     basePath: '<%= config.src %>/',
                     content: '<%= config.tmp %>/data/final.json',
                     transforms: {
-                        join: function(str, joinValue) {
-                            return str.join(joinValue);
+                        join: function (str, joinValue) {
+                            return str.join(joinValue)
                         },
-                        upper: function(str) {
-                            return String(str).toUpperCase();
+                        upper: function (str) {
+                            return String(str).toUpperCase()
                         },
-                        capitalize: function(str) {
-                            return String(str).charAt(0).toUpperCase() + String(str).slice(1);
+                        capitalize: function (str) {
+                            return (
+                                String(str)
+                                    .charAt(0)
+                                    .toUpperCase() + String(str).slice(1)
+                            )
                         },
-                        slugify: function(str) {
+                        slugify: function (str) {
                             const a = 'àáäâèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ·/_,:;'
                             const b = 'aaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh------'
                             const p = new RegExp(a.split('').join('|'), 'g')
 
-                            return str.toString().toLowerCase()
-                                .replace(/\s+/g, '-')           // Replace spaces with -
-                                .replace(p, c =>
-                                    b.charAt(a.indexOf(c)))     // Replace special chars
-                                .replace(/&/g, '-and-')         // Replace & with 'and'
-                                .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
-                                .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-                                .replace(/^-+/, '')             // Trim - from start of text
-                                .replace(/-+$/, '')             // Trim - from end of text
+                            return str
+                                .toString()
+                                .toLowerCase()
+                                .replace(/\s+/g, '-') // Replace spaces with -
+                                .replace(p, c => b.charAt(a.indexOf(c))) // Replace special chars
+                                .replace(/&/g, '-and-') // Replace & with 'and'
+                                .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+                                .replace(/\-\-+/g, '-') // Replace multiple - with single -
+                                .replace(/^-+/, '') // Trim - from start of text
+                                .replace(/-+$/, '') // Trim - from end of text
                         }
                     }
                 },
-                files: [{
-                    expand: true,
-                    cwd: '<%= config.src %>/',
-                    src: [
-                        '{,*/,**/}*.html',
-                        '!includes/{,*/,**/}*.html'
-                    ],
-                    dest: '<%= config.dist %>/'
-                }]
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= config.src %>/',
+                        src: ['{,*/,**/}*.html', '!includes/{,*/,**/}*.html'],
+                        dest: '<%= config.dist %>/'
+                    }
+                ]
             }
         },
         clean: {
-            dist: [
-                '<%= config.tmp %>/',
-                '<%= config.dist %>/'
-            ]
+            dist: ['<%= config.tmp %>/', '<%= config.dist %>/']
         },
         connect: {
             options: {
@@ -78,7 +79,7 @@ module.exports = function(grunt) {
             },
             livereload: {
                 options: {
-                    //keepalive: true,
+                    // keepalive: true,
                     base: [config.dist],
                     open: {
                         target: 'http://localhost:<%= connect.options.port %>'
@@ -88,9 +89,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     middleware: function (connect) {
-                        return [
-                            mountFolder(connect, config.dist)
-                        ];
+                        return [mountFolder(connect, config.dist)]
                     }
                 }
             }
@@ -102,9 +101,7 @@ module.exports = function(grunt) {
                         expand: true,
                         dot: true,
                         cwd: '<%= config.src %>/scripts/',
-                        src: [
-                            '{,*/,**/}*.js'
-                        ],
+                        src: ['{,*/,**/}*.js'],
                         dest: '<%= config.dist %>/scripts/'
                     }
                 ]
@@ -115,9 +112,7 @@ module.exports = function(grunt) {
                         expand: true,
                         dot: true,
                         cwd: '<%= config.tmp %>/styles/',
-                        src: [
-                            '{,*/,**/}*.css'
-                        ],
+                        src: ['{,*/,**/}*.css'],
                         dest: '<%= config.dist %>/styles/'
                     }
                 ]
@@ -128,10 +123,29 @@ module.exports = function(grunt) {
                         expand: true,
                         dot: true,
                         cwd: 'node_modules/',
-                        src: [
-                            'awesomplete/awesomplete.min.js'
-                        ],
+                        src: ['awesomplete/awesomplete.min.js'],
                         dest: '<%= config.dist %>/scripts/vendor/'
+                    }
+                ]
+            }
+        },
+        cssmin: {
+            dist: {
+                files: {
+                    '<%= config.dist %>/styles/main.css': [
+                        '<%= config.tmp %>/styles/main.css'
+                    ]
+                }
+            }
+        },
+        htmlmin: {
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= config.dist %>/',
+                        src: ['{,*/,**/}*.html', '!includes/{,*/,**/}*.html'],
+                        dest: '<%= config.dist %>/'
                     }
                 ]
             }
@@ -142,7 +156,8 @@ module.exports = function(grunt) {
                     stripComments: true
                 },
                 files: {
-                        '<%= config.tmp %>/data/final.json': '<%= config.src %>/data/base.json'
+                    '<%= config.tmp %>/data/final.json':
+                        '<%= config.src %>/data/base.json'
                 }
             }
         },
@@ -156,7 +171,8 @@ module.exports = function(grunt) {
                     'include css': true
                 },
                 files: {
-                    '<%= config.tmp %>/styles/main.css': '<%= config.src %>/styles/main.styl'
+                    '<%= config.tmp %>/styles/main.css':
+                        '<%= config.src %>/styles/main.styl'
                 }
             }
         },
@@ -209,50 +225,34 @@ module.exports = function(grunt) {
                     '<%= config.src %>/{,*/,**/}*.html',
                     '<%= config.src %>/data/{,*/,**/}*.json'
                 ],
-                tasks: [
-                    'json_bake',
-                    'bake'
-                ]
+                tasks: ['json_bake', 'bake']
             },
             scripts: {
-                files: [
-                    '<%= config.src %>/scripts/{,*/,**/}*.js'
-                ],
-                tasks: [
-                    'copy:scripts'
-                ]
+                files: ['<%= config.src %>/scripts/{,*/,**/}*.js'],
+                tasks: ['copy:scripts']
             },
             styles: {
-                files: [
-                    '<%= config.src %>/styles/{,*/,**/}*.styl'
-                ],
-                tasks: [
-                    'stylus:compile',
-                    'postcss',
-                    'copy:styles'
-                ]
+                files: ['<%= config.src %>/styles/{,*/,**/}*.styl'],
+                tasks: ['stylus:compile', 'postcss', 'copy:styles']
             }
         }
-    });
+    })
 
     grunt.registerTask('tasks', function () {
-        grunt.task.run([
-            'prompt',
-            'what-to-do'
-        ]);
-    });
+        grunt.task.run(['prompt', 'what-to-do'])
+    })
 
     grunt.registerTask('what-to-do', function (a, b) {
-        grunt.task.run([grunt.config('what-to-do')]);
-    });
+        grunt.task.run([grunt.config('what-to-do')])
+    })
 
-    grunt.registerTask('default', function(target) {
-        grunt.task.run(['tasks']);
-    });
+    grunt.registerTask('default', function (target) {
+        grunt.task.run(['tasks'])
+    })
 
     grunt.registerTask('local', function (target) {
         if (typeof target === 'undefined') {
-            target = 'local';
+            target = 'local'
         }
 
         grunt.task.run([
@@ -264,16 +264,23 @@ module.exports = function(grunt) {
             'copy',
             'connect:livereload',
             'watch'
-        ]);
-    });
+        ])
+    })
 
     grunt.registerTask('build', function (target) {
         if (typeof target === 'undefined') {
-            target = 'build';
+            target = 'build'
         }
 
         grunt.task.run([
-
-        ]);
-    });
-};
+            'clean',
+            'stylus:compile',
+            'postcss',
+            'json_bake',
+            'bake',
+            'copy',
+            'htmlmin',
+            'cssmin'
+        ])
+    })
+}

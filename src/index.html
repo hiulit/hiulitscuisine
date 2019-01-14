@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{globalMetas.title}} - {{globalMetas.subtitle}}</title>
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                 <ul>
                     <!--(bake-start _foreach="recipe:recipes" _bake="/includes/recipe.html > receptes/{{recipe.title || slugify}}.html")-->
                     <li>
-                        <a href="/{{@link}}">{{recipe.title}}</a>
+                        <a href="./{{@link}}">{{recipe.title}}</a>
                     </li>
                     <!--(bake-end )-->
                 </ul>
@@ -31,7 +31,7 @@
                 <ul>
                     <!--(bake-start _foreach="category:categories" _bake="/includes/category.html > categories/{{category.id || slugify}}/index.html")-->
                     <li>
-                        <a href="/categories/{{category.id || slugify}}/">{{category.id}}</a>
+                        <a href="./categories/{{category.id || slugify}}/">{{category.id}}</a>
                     </li>
                     <!--(bake-end )-->
                 </ul>
@@ -41,7 +41,7 @@
                 <ul>
                     <!--(bake-start _foreach="tag:tags" _bake="/includes/tag.html > ingredients/{{tag.id || slugify}}/index.html")-->
                     <li>
-                        <a href="/ingredients/{{tag.id || slugify}}/">{{tag.id}}</a>
+                        <a href="./ingredients/{{tag.id || slugify}}/">{{tag.id}}</a>
                     </li>
                     <!--(bake-end )-->
                 </ul>

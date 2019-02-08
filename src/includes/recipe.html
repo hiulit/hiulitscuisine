@@ -2,11 +2,12 @@
 <html lang="ca">
 
 <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{recipe.title}} | {{globalMetas.title}} - {{globalMetas.shortSubtitle}}</title>
-    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
             <article>
                 <header>
                     <h1>
-                        <a href="./">{{globalMetas.title}} - {{globalMetas.subtitle}}</a>
+                        <a href="/">{{globalMetas.title}} - {{globalMetas.subtitle}}</a>
                     </h1>
                 </header>
                 <section>
@@ -66,7 +67,7 @@
                         <ul>
                             <!--(bake-start _foreach="category:recipe.categories")-->
                             <li>
-                                <a href="./categories/{{category || slugify}}/">{{category}}</a>
+                                <a href="/categories/{{category || slugify}}/">{{category}}</a>
                             </li>
                             <!--(bake-end)-->
                         </ul>
@@ -76,7 +77,7 @@
                         <ul>
                             <!--(bake-start _foreach="tag:recipe.tags")-->
                             <li>
-                                <a href="./ingredients/{{tag || slugify}}/">{{tag}}</a>
+                                <a href="/ingredients/{{tag || slugify}}/">{{tag}}</a>
                             </li>
                             <!--(bake-end)-->
                         </ul>
@@ -85,7 +86,7 @@
                 <footer>
                     <p>
                         <small>
-                            <a href="./receptes/{{recipe.title || slugify}}.html">{{recipe.title}}</a> és una recepta de
+                            <a href="/receptes/{{recipe.title || slugify}}.html">{{recipe.title}}</a> és una recepta de
                             <strong>{{globalMetas.title}} - {{globalMetas.shortSubtitle}}.</strong>
                         </small>
                     </p>

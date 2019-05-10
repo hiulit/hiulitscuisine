@@ -8,6 +8,9 @@ var https = require('https');
 http.globalAgent.maxSockets = 20;
 https.globalAgent.maxSockets = 20;
 
+const srcURL = 'https://www.hiulitscuisine.com/category/receptes/'
+const destPath = '/src/data/includes/'
+
 function sortByKey(array, key) {
     return array.sort(function(a, b) {
         var x = a[key]
@@ -221,20 +224,18 @@ function getRecipe(url) {
 }
 
 function createJSON(data, name) {
-    if (name === undefined) {
-        name = 'lala'
+    if (name === '' || name === undefined) {
+        throw new Error('Function needs a name (string) as a second parameter!')
     } else if (typeof name !== 'string' || name instanceof String) {
         name.toString()
     }
 
-    let dir = '/src/data/includes/'
-
-    fs.writeFile(path.join(__dirname, dir + name + '.json'), JSON.stringify(data, null, 4), (err) => {
+    fs.writeFile(path.join(__dirname, destPath + name + '.json'), JSON.stringify(data, null, 4), (err) => {
         if (err) {
             console.error(err)
             return
         }
-        console.log('> "'+ dir + name + '.json" has been created successfully!')
+        console.log('> "'+ destPath + name + '.json" has been created successfully!')
     })
 }
 
@@ -298,7 +299,10 @@ function getAllRecipes(url) {
                     tags = sortByKey(tags, 'id')
                     createJSON(tags, 'tags')
                 })
+                .catch(function(e) {
+                    console.log(e)
+                })
         })
 }
 
-getAllRecipes('http://www.hiulitscuisine.com/category/receptes/')
+getAllRecipes(srcURL)

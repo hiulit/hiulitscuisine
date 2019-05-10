@@ -27,11 +27,12 @@ function sortByKey(array, key) {
 
 function getURLs(url) {
     console.log('> Getting URLs ...')
+    console.log()
     return new Promise(function(resolve, reject) {
         request(url, function(err, response, body) {
             if(err) reject(err)
             if(response.statusCode !== 200) {
-                reject('Invalid status code: '+response.statusCode)
+                reject('Invalid status code: ' + response.statusCode)
             }
             let $ = cheerio.load(body)
             let urls = []
@@ -55,7 +56,7 @@ function getRecipe(url) {
             }
         }
         request(options, function(err, response, body) {
-            console.log('> Getting ' + url)
+            console.log(url)
             if(err) reject(err)
             if(response.statusCode !== 200) {
                 console.log('ERROR:', url, response.statusCode)
@@ -235,12 +236,15 @@ function createJSON(data, name) {
             console.error(err)
             return
         }
-        console.log('> "'+ destPath + name + '.json" has been created successfully!')
+        console.log('"' + destPath + name + '.json" has been created successfully!')
+        console.log()
     })
 }
 
 function getAllRecipes(url) {
+    console.log()
     console.log('> Getting all the recipes ...')
+    console.log()
     getURLs(url)
         .then(function(urls) {
             let promises = []
@@ -249,7 +253,9 @@ function getAllRecipes(url) {
             }
             Promise.all(promises)
                 .then(function(response){
-                    console.log('> Received ' + response.length + ' recipes.')
+                    console.log()
+                    console.log('\x1b[32m%s\x1b[0m', 'Received ' + response.length + ' recipes.')
+                    console.log()
 
                     // Recipes
                     let recipes = sortByKey(response, 'title')

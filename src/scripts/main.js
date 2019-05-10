@@ -99,7 +99,7 @@ function searchIngredients(ingredients) {
             `
         } else {
             searchResultsTemplate = `
-                <p>No hi ha cap recepta amb aquests ingredients: ${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')} en la categoria <strong>${category}</strong>.</p>
+                <p>No hi ha cap recepta amb aquests ingredients (${ingredients.map(ingredient => `<strong>${ingredient}</strong>`).join(', ')}) en la categoria <strong>${category}</strong>.</p>
             `
         }
         if (searchResultsTemplate) document.querySelector('.js-search-results').innerHTML = searchResultsTemplate

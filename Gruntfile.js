@@ -183,7 +183,7 @@ module.exports = function (grunt) {
                 processors: [
                     // require('postcssfixer')({browsers: 'last 2 versions'}) // add vendor prefixes
                     require('autoprefixer')({
-                        browsers: ['> 0%', 'ie 8-10', 'Android >= 2.3']
+                        overrideBrowserslist: ['> 0%', 'ie 8-10', 'Android >= 2.3']
                     }) // add vendor prefixes
                 ]
             },
